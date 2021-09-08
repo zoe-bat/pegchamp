@@ -1,6 +1,6 @@
 # credits
 
-## \#1 pegchamp
+## \#1 pegchamp and wife
 
 [tess🐯](https://github.com/rawtess)
 
