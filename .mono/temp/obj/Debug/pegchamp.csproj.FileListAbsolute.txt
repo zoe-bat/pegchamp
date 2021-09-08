@@ -1,0 +1,8 @@
+/mnt/296a894f-4ca1-4eb8-8a77-9940196b59c9/Nextcloud/Documents/Code/Godot/pegchamp/.mono/temp/bin/Debug/pegchamp.dll
+/mnt/296a894f-4ca1-4eb8-8a77-9940196b59c9/Nextcloud/Documents/Code/Godot/pegchamp/.mono/temp/bin/Debug/pegchamp.pdb
+/mnt/296a894f-4ca1-4eb8-8a77-9940196b59c9/Nextcloud/Documents/Code/Godot/pegchamp/.mono/temp/obj/Debug/pegchamp.csprojAssemblyReference.cache
+/mnt/296a894f-4ca1-4eb8-8a77-9940196b59c9/Nextcloud/Documents/Code/Godot/pegchamp/.mono/temp/obj/Debug/pegchamp.AssemblyInfoInputs.cache
+/mnt/296a894f-4ca1-4eb8-8a77-9940196b59c9/Nextcloud/Documents/Code/Godot/pegchamp/.mono/temp/obj/Debug/pegchamp.AssemblyInfo.cs
+/mnt/296a894f-4ca1-4eb8-8a77-9940196b59c9/Nextcloud/Documents/Code/Godot/pegchamp/.mono/temp/obj/Debug/pegchamp.csproj.CoreCompileInputs.cache
+/mnt/296a894f-4ca1-4eb8-8a77-9940196b59c9/Nextcloud/Documents/Code/Godot/pegchamp/.mono/temp/obj/Debug/pegchamp.dll
+/mnt/296a894f-4ca1-4eb8-8a77-9940196b59c9/Nextcloud/Documents/Code/Godot/pegchamp/.mono/temp/obj/Debug/pegchamp.pdb

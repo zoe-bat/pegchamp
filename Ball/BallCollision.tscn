@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 8.23541
+
+[node name="BallCollision" type="CollisionShape2D"]
+visible = false
+shape = SubResource( 2 )

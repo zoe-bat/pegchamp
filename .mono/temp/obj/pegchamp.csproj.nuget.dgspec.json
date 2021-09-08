@@ -1,0 +1,53 @@
+{
+  "format": 1,
+  "restore": {
+    "/mnt/296a894f-4ca1-4eb8-8a77-9940196b59c9/Nextcloud/Documents/Code/Godot/pegchamp/pegchamp.csproj": {}
+  },
+  "projects": {
+    "/mnt/296a894f-4ca1-4eb8-8a77-9940196b59c9/Nextcloud/Documents/Code/Godot/pegchamp/pegchamp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/mnt/296a894f-4ca1-4eb8-8a77-9940196b59c9/Nextcloud/Documents/Code/Godot/pegchamp/pegchamp.csproj",
+        "projectName": "pegchamp",
+        "projectPath": "/mnt/296a894f-4ca1-4eb8-8a77-9940196b59c9/Nextcloud/Documents/Code/Godot/pegchamp/pegchamp.csproj",
+        "packagesPath": "/home/zoe/.nuget/packages/",
+        "outputPath": "/mnt/296a894f-4ca1-4eb8-8a77-9940196b59c9/Nextcloud/Documents/Code/Godot/pegchamp/.mono/temp/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/zoe/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "targetAlias": "net472",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "targetAlias": "net472",
+          "dependencies": {
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.0, )",
+              "autoReferenced": true
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.205/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "68FqnhlgLGoIKDOZgEPvoCBAlqqu04LWcagkWfpe08J2AZQ4HuKUjGv/WgToQ8uX47+jubJcNLukZ75ouOvvDg==",
+  "success": true,
+  "projectFilePath": "/mnt/296a894f-4ca1-4eb8-8a77-9940196b59c9/Nextcloud/Documents/Code/Godot/pegchamp/pegchamp.csproj",
+  "expectedPackageFiles": [
+    "/home/zoe/.nuget/packages/microsoft.netframework.referenceassemblies/1.0.0/microsoft.netframework.referenceassemblies.1.0.0.nupkg.sha512",
+    "/home/zoe/.nuget/packages/microsoft.netframework.referenceassemblies.net472/1.0.0/microsoft.netframework.referenceassemblies.net472.1.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
