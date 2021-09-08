@@ -1,0 +1,13 @@
+# credits
+
+## \#1 pegchamp
+
+[tess🐯](https://github.com/rawtess)
+
+## color palette
+
+[まるき - blessing](https://lospec.com/palette-list/blessing)
+
+## font
+
+[codeman38 - yoster island](https://www.1001fonts.com/yoster-island-font.html)
