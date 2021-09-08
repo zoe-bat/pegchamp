@@ -2,7 +2,7 @@ extends Node
 
 signal balls_changed()
 
-var max_balls = 4
+var max_balls = 2
 var balls_left
 var pinks_left = 0
 var level_won = false
