@@ -64,6 +64,7 @@ tracks/1/keys = {
 }
 
 [node name="Transition" type="CanvasLayer"]
+layer = 128
 script = ExtResource( 2 )
 
 [node name="TransitionSprite" type="Sprite" parent="."]

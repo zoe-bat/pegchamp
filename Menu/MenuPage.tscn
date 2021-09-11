@@ -30,23 +30,17 @@ __meta__ = {
 }
 
 [node name="CenterContainer" type="CenterContainer" parent="Control/Panel"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -160.0
-margin_top = -76.0
-margin_right = 160.0
-margin_bottom = 76.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="GridContainer" type="GridContainer" parent="Control/Panel/CenterContainer"]
-margin_left = 117.0
-margin_top = 65.0
-margin_right = 203.0
-margin_bottom = 87.0
+margin_left = 123.0
+margin_top = 71.0
+margin_right = 209.0
+margin_bottom = 93.0
 
 [node name="Heading" type="Label" parent="Control/Panel/CenterContainer/GridContainer"]
 margin_right = 86.0
@@ -55,8 +49,8 @@ theme = ExtResource( 1 )
 text = "you won!"
 align = 1
 
-[node name="ButtonRow" type="GridContainer" parent="Control/Panel/CenterContainer/GridContainer"]
+[node name="ButtonRow" type="HBoxContainer" parent="Control/Panel/CenterContainer/GridContainer"]
 margin_top = 22.0
 margin_right = 86.0
 margin_bottom = 22.0
-columns = 4
+alignment = 1

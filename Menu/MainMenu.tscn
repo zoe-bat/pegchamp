@@ -1,0 +1,63 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Menu/Theme.tres" type="Theme" id=1]
+[ext_resource path="res://Menu/Buttons/SceneSelectButton.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Effects/FadeIn.tscn" type="PackedScene" id=3]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TabContainer" type="TabContainer" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Main Menu" type="Tabs" parent="Control/TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+theme = ExtResource( 1 )
+
+[node name="Levels" type="Tabs" parent="Control/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+theme = ExtResource( 1 )
+
+[node name="GridContainer" type="GridContainer" parent="Control/TabContainer/Levels"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LevelSelectButton" parent="Control/TabContainer/Levels/GridContainer" instance=ExtResource( 2 )]
+flat = false
+scene = "res://Stages/EmptyStage.tscn"
+
+[node name="Settings" type="Tabs" parent="Control/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+theme = ExtResource( 1 )
+
+[node name="Transition" parent="." instance=ExtResource( 3 )]

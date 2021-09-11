@@ -30,6 +30,10 @@ func restart_level():
 	var fadeout = Fadeout.instance()
 	fadeout.scene_to_load = current_stage
 	main.add_child(fadeout)
-	
+	reset_board()
+
+func reset_board():
+	balls_left = max_balls
 	pinks_left = 0
 	level_won = false
+	
