@@ -1,4 +1,7 @@
 extends Node2D
+
+export var stage_name = "test stage"
+
 func _physics_process(_delta):
 	fast_forward()
 

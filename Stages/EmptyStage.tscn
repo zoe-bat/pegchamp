@@ -161,12 +161,16 @@ script = ExtResource( 10 )
 light_mask = 0
 z_index = 20
 
-[node name="Background" type="Sprite" parent="Decoration"]
+[node name="ParallaxBackground" type="ParallaxBackground" parent="Decoration"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Decoration/ParallaxBackground"]
+motion_scale = Vector2( 0.5, 0.5 )
+
+[node name="Background" type="Sprite" parent="Decoration/ParallaxBackground/ParallaxLayer"]
 z_index = -200
 texture = ExtResource( 12 )
-centered = false
 region_enabled = true
-region_rect = Rect2( 0, 0, 384, 216 )
+region_rect = Rect2( 0, 0, 768, 432 )
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 10 )
@@ -295,8 +299,16 @@ position = Vector2( 235, 128 )
 rotation = -0.785397
 
 [node name="StaticBody2D4" parent="Pegs" instance=ExtResource( 13 )]
-position = Vector2( 83, 62 )
-rotation = 0.785397
+position = Vector2( 40, 116 )
+rotation = 3.14159
+
+[node name="StaticBody2D5" parent="Pegs" instance=ExtResource( 13 )]
+position = Vector2( 64, 140 )
+rotation = 3.14159
+
+[node name="StaticBody2D6" parent="Pegs" instance=ExtResource( 13 )]
+position = Vector2( 88, 164 )
+rotation = 3.14159
 
 [node name="PinkPeg4" parent="Pegs" instance=ExtResource( 8 )]
 position = Vector2( 216, 160 )

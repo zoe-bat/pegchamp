@@ -4,8 +4,8 @@ extends CanvasLayer
 var scene_to_load = "res://Menu/MenuPage.tscn"
 
 func _ready():
-	$AnimationPlayer.play("FadeOut")
 	$TransitionSprite.visible = true
+	$AnimationPlayer.play("FadeOut")
 
 func finish_animation():
 	var _new_scene = get_tree().change_scene(scene_to_load)

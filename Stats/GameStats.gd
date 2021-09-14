@@ -1,6 +1,7 @@
 extends Node
 
 signal balls_changed()
+signal current_stage_changed(scene)
 
 var max_balls = 2
 var balls_left
@@ -37,3 +38,6 @@ func reset_board():
 	pinks_left = 0
 	level_won = false
 	
+func set_current_scene(stage):
+	current_stage = stage
+	emit_signal("current_stage_changed", current_stage)

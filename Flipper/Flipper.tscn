@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Flipper/flipper.png" type="Texture" id=1]
+[ext_resource path="res://Flipper/Flipper.gd" type="Script" id=2]
+
+[node name="Flipper" type="KinematicBody2D"]
+position = Vector2( 309, 143 )
+motion/sync_to_physics = true
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -11, 0 )
+texture = ExtResource( 1 )

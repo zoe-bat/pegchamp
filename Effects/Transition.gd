@@ -3,8 +3,8 @@ extends CanvasLayer
 onready var animation = $AnimationPlayer
 
 func _ready():
-	animation.play("FadeIn")
 	$TransitionSprite.visible = true
+	animation.play("FadeIn")
 
 func finish_animation():
 	queue_free()

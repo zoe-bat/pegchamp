@@ -5,3 +5,6 @@
 
 [node name="FadeOut" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
+
+[node name="TransitionSprite" parent="." index="0"]
+position = Vector2( 0, 0 )
