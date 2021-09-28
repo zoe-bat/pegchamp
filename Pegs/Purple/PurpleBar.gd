@@ -9,6 +9,7 @@ func make_green():
 	green_bar.global_rotation = global_rotation
 	
 	main.add_child(green_bar)
+	GameStats.add_to_multiplier()
 	queue_free()
 
 func bouncy():

@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Ball/sprite.png" type="Texture" id=1]
 [ext_resource path="res://Ball/Ball.gd" type="Script" id=2]
 [ext_resource path="res://Ball/Ball.tres" type="PhysicsMaterial" id=3]
 [ext_resource path="res://Ball/BallCollision.tscn" type="PackedScene" id=4]
+[ext_resource path="res://SFX/Scratch/BallReset.wav" type="AudioStream" id=5]
 
 [sub_resource type="Animation" id=1]
 resource_name = "reset"
@@ -33,6 +34,20 @@ tracks/1/keys = {
 "points": PoolRealArray( -10, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
 "times": PoolRealArray( 0, 1.5 )
 }
+tracks/2/type = "audio"
+tracks/2/path = NodePath("AudioStreamPlayer")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 5 )
+} ],
+"times": PoolRealArray( 0 )
+}
 
 [node name="Ball" type="RigidBody2D"]
 collision_layer = 4
@@ -60,5 +75,8 @@ wait_time = 0.1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/reset = SubResource( 1 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
 
 [connection signal="timeout" from="TrajectoryTimer" to="." method="_on_TrajectoryTimer_timeout"]

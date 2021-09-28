@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Menu/Buttons/LevelSelectIconButton.gd" type="Script" id=1]
+[ext_resource path="res://Menu/Buttons/ButtonSFX.tscn" type="PackedScene" id=2]
 
 [node name="LevelSelectIconButton" type="TextureButton"]
 margin_right = 40.0
@@ -10,4 +11,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="ButtonSFX" parent="." instance=ExtResource( 2 )]
+
+[connection signal="focus_entered" from="." to="ButtonSFX" method="on_hover"]
+[connection signal="mouse_entered" from="." to="ButtonSFX" method="on_hover"]
+[connection signal="pressed" from="." to="ButtonSFX" method="on_select"]
 [connection signal="pressed" from="." to="." method="_on_LevelSelectIconButton_pressed"]

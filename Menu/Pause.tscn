@@ -1,0 +1,95 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Menu/Buttons/RestartButton.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Menu/Icons/Play/Play2.png" type="Texture" id=2]
+[ext_resource path="res://Menu/Icons/Home/homeIcon1.png" type="Texture" id=3]
+[ext_resource path="res://Menu/Icons/Home/homeIcon2.png" type="Texture" id=4]
+[ext_resource path="res://Menu/Icons/Home/homeIcon3.png" type="Texture" id=5]
+[ext_resource path="res://Menu/Buttons/LevelSelectIconButton.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Menu/Pause.gd" type="Script" id=7]
+[ext_resource path="res://Menu/Icons/Play/Play1.png" type="Texture" id=8]
+[ext_resource path="res://Menu/Icons/Play/Play3.png" type="Texture" id=9]
+[ext_resource path="res://Menu/Buttons/AudioSliders/SFXVolume2.png" type="Texture" id=10]
+[ext_resource path="res://Menu/Buttons/AudioSliders/SFXVolume1.png" type="Texture" id=11]
+[ext_resource path="res://Menu/Buttons/AudioSliders/VolumeSlider.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Menu/Buttons/AudioSliders/MusicVolume1.png" type="Texture" id=13]
+[ext_resource path="res://Menu/Buttons/AudioSliders/MusicVolume2.png" type="Texture" id=14]
+[ext_resource path="res://Menu/Theme.tres" type="Theme" id=15]
+[ext_resource path="res://Menu/Buttons/Fullscreen/FullscreenButton.tscn" type="PackedScene" id=16]
+
+[node name="Pause" type="CanvasLayer"]
+pause_mode = 2
+
+[node name="Pause" type="CenterContainer" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 15 )
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PanelContainer" type="PanelContainer" parent="Pause"]
+margin_left = 190.0
+margin_top = 106.0
+margin_right = 194.0
+margin_bottom = 110.0
+theme = ExtResource( 15 )
+
+[node name="HBoxContainer" type="VBoxContainer" parent="Pause/PanelContainer"]
+margin_left = 2.0
+margin_top = 2.0
+margin_right = 142.0
+margin_bottom = 106.0
+
+[node name="VBoxContainer" type="HBoxContainer" parent="Pause/PanelContainer/HBoxContainer"]
+margin_right = 140.0
+margin_bottom = 32.0
+
+[node name="FullscreenButton" parent="Pause/PanelContainer/HBoxContainer/VBoxContainer" instance=ExtResource( 16 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 32.0
+margin_bottom = 32.0
+
+[node name="LevelSelectIconButton" parent="Pause/PanelContainer/HBoxContainer/VBoxContainer" instance=ExtResource( 6 )]
+margin_left = 36.0
+margin_right = 68.0
+margin_bottom = 32.0
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 5 )
+texture_hover = ExtResource( 4 )
+
+[node name="RestartButton" parent="Pause/PanelContainer/HBoxContainer/VBoxContainer" instance=ExtResource( 1 )]
+margin_left = 72.0
+margin_right = 104.0
+margin_bottom = 32.0
+
+[node name="Resume" type="TextureButton" parent="Pause/PanelContainer/HBoxContainer/VBoxContainer"]
+margin_left = 108.0
+margin_right = 140.0
+margin_bottom = 32.0
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 9 )
+texture_hover = ExtResource( 2 )
+
+[node name="SFX Volume" parent="Pause/PanelContainer/HBoxContainer" instance=ExtResource( 12 )]
+margin_top = 36.0
+margin_right = 140.0
+margin_bottom = 68.0
+custom_icons/grabber_highlight = ExtResource( 10 )
+custom_icons/grabber = ExtResource( 11 )
+bus_channel = "SFX"
+
+[node name="Music Volume" parent="Pause/PanelContainer/HBoxContainer" instance=ExtResource( 12 )]
+margin_top = 72.0
+margin_right = 140.0
+margin_bottom = 104.0
+custom_icons/grabber_highlight = ExtResource( 14 )
+custom_icons/grabber = ExtResource( 13 )
+bus_channel = "Music"
+
+[connection signal="pressed" from="Pause/PanelContainer/HBoxContainer/VBoxContainer/LevelSelectIconButton" to="Pause" method="_on_pause_button_pressed"]
+[connection signal="pressed" from="Pause/PanelContainer/HBoxContainer/VBoxContainer/RestartButton" to="Pause" method="_on_pause_button_pressed"]
+[connection signal="pressed" from="Pause/PanelContainer/HBoxContainer/VBoxContainer/Resume" to="Pause" method="_on_pause_button_pressed"]

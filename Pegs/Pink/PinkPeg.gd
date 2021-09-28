@@ -18,6 +18,7 @@ func make_green():
 	
 	#finally delete the old peg
 	GameStats.pinks_left -= 1
+	GameStats.add_to_multiplier()
 	win_level()
 	Engine.time_scale = 1
 	queue_free()

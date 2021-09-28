@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/SelectButton.wav-22daca460391460ee3cf8c29d8fc288e.sample"
+
+[deps]
+
+source_file="res://SFX/Scratch/SelectButton.wav"
+dest_files=[ "res://.import/SelectButton.wav-22daca460391460ee3cf8c29d8fc288e.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

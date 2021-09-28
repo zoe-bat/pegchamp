@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Pegs/Green/HitSFX.gd" type="Script" id=1]
+[ext_resource path="res://SFX/greenExplodes.wav" type="AudioStream" id=2]
+
+[node name="HitSFX" type="AudioStreamPlayer2D"]
+stream = ExtResource( 2 )
+volume_db = 8.0
+autoplay = true
+bus = "SFX"
+script = ExtResource( 1 )

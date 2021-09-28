@@ -3,11 +3,13 @@ extends Node
 signal balls_changed()
 signal current_stage_changed(scene)
 
-var max_balls = 2
+var unlock_points = 10
+var max_balls = 8
 var balls_left
 var pinks_left = 0
 var level_won = false
 var current_stage = "res://Stages/EmptyStage.tscn"
+var multiplier = 1
 
 func add_balls(balls):
 	balls_left += balls
@@ -37,7 +39,15 @@ func reset_board():
 	balls_left = max_balls
 	pinks_left = 0
 	level_won = false
+	multiplier = 1
 	
 func set_current_scene(stage):
 	current_stage = stage
 	emit_signal("current_stage_changed", current_stage)
+	
+func add_to_multiplier():
+	var SFXPlayer = load("res://SFX/SFXPlayer.tscn")
+	var sfx_player = SFXPlayer.instance()
+	var main = get_tree().current_scene
+	main.add_child(sfx_player)
+	multiplier += 1

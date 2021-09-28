@@ -1,10 +1,13 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Effects/transitionPattern.png" type="Texture" id=1]
 [ext_resource path="res://Effects/Transition.gd" type="Script" id=2]
+[ext_resource path="res://SFX/Scratch/Fadeout.ogg" type="AudioStream" id=3]
+[ext_resource path="res://SFX/Scratch/Fadein.ogg" type="AudioStream" id=4]
 
 [sub_resource type="Animation" id=1]
 resource_name = "FadeIn"
+length = 0.7
 step = 0.05
 tracks/0/type = "bezier"
 tracks/0/path = NodePath("TransitionSprite:position:x")
@@ -14,7 +17,7 @@ tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
 "points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 384, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 1 )
+"times": PoolRealArray( 0, 0.7 )
 }
 tracks/1/type = "method"
 tracks/1/path = NodePath(".")
@@ -23,7 +26,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 1 ),
+"times": PoolRealArray( 0.7 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
@@ -33,7 +36,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id=2]
 resource_name = "FadeOut"
-length = 0.75
+length = 1.3
 loop = true
 step = 0.05
 tracks/0/type = "value"
@@ -43,10 +46,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.75 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.4, 1.25 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 384, 0 ), Vector2( 0, 0 ) ]
+"values": [ Vector2( 384, 0 ), Vector2( 0, 0 ), Vector2( 0, 0 ) ]
 }
 tracks/1/type = "method"
 tracks/1/path = NodePath(".")
@@ -55,12 +58,26 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0.75 ),
+"times": PoolRealArray( 1.25 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
 "method": "finish_animation"
 } ]
+}
+tracks/2/type = "audio"
+tracks/2/path = NodePath("AnimationPlayer/FadeoutSound")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"clips": [ {
+"end_offset": 0.153926,
+"start_offset": 0.0,
+"stream": ExtResource( 3 )
+} ],
+"times": PoolRealArray( 0 )
 }
 
 [node name="Transition" type="CanvasLayer"]
@@ -76,6 +93,12 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 768, 216 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-playback_process_mode = 0
 anims/FadeIn = SubResource( 1 )
 anims/FadeOut = SubResource( 2 )
+
+[node name="FadeInSound" type="AudioStreamPlayer" parent="."]
+pause_mode = 1
+stream = ExtResource( 4 )
+bus = "SFX"
+
+[connection signal="finished" from="FadeInSound" to="." method="_on_FadeInSound_finished"]

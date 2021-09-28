@@ -4,10 +4,10 @@
 [ext_resource path="res://Pegs/DefaultPegCollisionShape.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Pegs/Pink/Pink.png" type="Texture" id=3]
 
-[sub_resource type="CircleShape2D" id=2]
+[sub_resource type="CircleShape2D" id=1]
 radius = 10.2018
 
-[sub_resource type="CircleShape2D" id=1]
+[sub_resource type="CircleShape2D" id=2]
 radius = 33.0151
 
 [node name="PinkPeg" type="StaticBody2D"]
@@ -18,7 +18,7 @@ collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RegularCollision"]
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="SlowmoTimer" type="Timer" parent="."]
 wait_time = 0.075
@@ -34,7 +34,7 @@ collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LastPegCollision"]
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [connection signal="body_entered" from="RegularCollision" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="RegularCollision" to="." method="_on_Area2D_body_exited"]

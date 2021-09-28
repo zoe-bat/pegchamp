@@ -9,3 +9,4 @@ func _on_LevelSelectIconButton_pressed():
 	var fadeout = Fadeout.instance()
 	fadeout.scene_to_load = scene
 	main.add_child(fadeout)
+	get_tree().paused = false

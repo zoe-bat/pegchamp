@@ -4,10 +4,12 @@
 [ext_resource path="res://Flipper/Flipper.gd" type="Script" id=2]
 
 [node name="Flipper" type="KinematicBody2D"]
-position = Vector2( 309, 143 )
 motion/sync_to_physics = true
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( -11, 0 )
 texture = ExtResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( 3, -5, -2, -5, -3, -4, -10, -4, -17, -4, -18, -3, -20, -3, -21, -2, -22, -2, -23, -1, -24, -1, -25, 0, -26, 0, -27, 1, -27, 2, -26, 3, -25, 3, -24, 4, -20, 4, -19, 5, 2, 5, 3, 4, 4, 3, 4, 2, 5, 1, 5, -2, 4, -3, 4, -4 )

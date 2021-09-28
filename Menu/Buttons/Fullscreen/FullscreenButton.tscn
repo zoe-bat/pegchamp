@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Menu/Buttons/Fullscreen/fullscreen1.png" type="Texture" id=1]
 [ext_resource path="res://Menu/Buttons/Fullscreen/fullscreen3.png" type="Texture" id=2]
 [ext_resource path="res://Menu/Buttons/Fullscreen/fullscreen2.png" type="Texture" id=3]
 [ext_resource path="res://Menu/Buttons/Fullscreen/FullscreenButton.gd" type="Script" id=4]
+[ext_resource path="res://Menu/Buttons/ButtonSFX.tscn" type="PackedScene" id=5]
 
 [node name="FullscreenButton" type="TextureButton"]
 anchor_right = 1.0
@@ -17,4 +18,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="ButtonSFX" parent="." instance=ExtResource( 5 )]
+
+[connection signal="focus_entered" from="." to="ButtonSFX" method="on_hover"]
+[connection signal="mouse_entered" from="." to="ButtonSFX" method="on_hover"]
+[connection signal="pressed" from="." to="ButtonSFX" method="on_select"]
 [connection signal="toggled" from="." to="." method="_on_FullscreenButton_toggled"]

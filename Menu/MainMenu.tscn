@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Menu/Theme.tres" type="Theme" id=1]
 [ext_resource path="res://Menu/Buttons/SceneSelectButton.tscn" type="PackedScene" id=2]
@@ -8,6 +8,11 @@
 [ext_resource path="res://icon.png" type="Texture" id=6]
 [ext_resource path="res://Menu/LevelInfo.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Pegs/Pink/Pink.png" type="Texture" id=8]
+[ext_resource path="res://Menu/Buttons/AudioSliders/VolumeSlider.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Menu/Buttons/AudioSliders/MusicVolume1.png" type="Texture" id=10]
+[ext_resource path="res://Menu/Buttons/AudioSliders/MusicVolume2.png" type="Texture" id=11]
+[ext_resource path="res://Menu/Buttons/AudioSliders/SFXVolume1.png" type="Texture" id=12]
+[ext_resource path="res://Menu/Buttons/AudioSliders/SFXVolume2.png" type="Texture" id=13]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 
@@ -55,13 +60,27 @@ __meta__ = {
 margin_top = 133.0
 margin_right = 368.0
 margin_bottom = 165.0
-alignment = 2
+alignment = 1
+
+[node name="SFX Volume" parent="Control/TabContainer/Main Menu/VBoxContainer/HBoxContainer" instance=ExtResource( 9 )]
+margin_left = 64.0
+margin_right = 164.0
+custom_icons/grabber_highlight = ExtResource( 13 )
+custom_icons/grabber = ExtResource( 12 )
+bus_channel = "SFX"
+
+[node name="Music Volume" parent="Control/TabContainer/Main Menu/VBoxContainer/HBoxContainer" instance=ExtResource( 9 )]
+margin_left = 168.0
+margin_right = 268.0
+custom_icons/grabber_highlight = ExtResource( 11 )
+custom_icons/grabber = ExtResource( 10 )
+bus_channel = "Music"
 
 [node name="FullscreenButton" parent="Control/TabContainer/Main Menu/VBoxContainer/HBoxContainer" instance=ExtResource( 5 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 336.0
-margin_right = 368.0
+margin_left = 272.0
+margin_right = 304.0
 margin_bottom = 32.0
 
 [node name="Levels" type="Tabs" parent="Control/TabContainer"]
@@ -84,9 +103,12 @@ __meta__ = {
 }
 
 [node name="LevelInfo" parent="Control/TabContainer/Levels/HBoxContainer" instance=ExtResource( 7 )]
+margin_left = 157.0
+margin_right = 172.0
+alignment = 1
 
 [node name="LevelList" type="ScrollContainer" parent="Control/TabContainer/Levels/HBoxContainer"]
-margin_left = 154.0
+margin_left = 176.0
 margin_right = 368.0
 margin_bottom = 165.0
 theme = ExtResource( 1 )
@@ -102,72 +124,74 @@ margin_bottom = 335.0
 [node name="LevelSelectButton" parent="Control/TabContainer/Levels/HBoxContainer/LevelList/LevelListHBox" instance=ExtResource( 2 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 190.0
-margin_bottom = 40.0
+margin_right = 168.0
+margin_bottom = 25.0
 icon = ExtResource( 8 )
 scene = "res://Stages/EmptyStage.tscn"
 
 [node name="LevelSelectButton3" parent="Control/TabContainer/Levels/HBoxContainer/LevelList/LevelListHBox" instance=ExtResource( 2 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 88.0
-margin_right = 190.0
-margin_bottom = 128.0
+margin_top = 29.0
+margin_right = 168.0
+margin_bottom = 69.0
 icon = ExtResource( 6 )
 scene = "res://Stages/EmptyStage.tscn"
+unlock_points_required = 10
 
 [node name="LevelSelectButton4" parent="Control/TabContainer/Levels/HBoxContainer/LevelList/LevelListHBox" instance=ExtResource( 2 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 132.0
-margin_right = 190.0
-margin_bottom = 172.0
+margin_top = 73.0
+margin_right = 168.0
+margin_bottom = 113.0
 text = "> piss"
 icon = ExtResource( 6 )
 scene = "res://Stages/EmptyStage.tscn"
+unlock_points_required = 20
 
 [node name="LevelSelectButton5" parent="Control/TabContainer/Levels/HBoxContainer/LevelList/LevelListHBox" instance=ExtResource( 2 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 176.0
-margin_right = 190.0
-margin_bottom = 216.0
+margin_top = 117.0
+margin_right = 168.0
+margin_bottom = 157.0
 icon = ExtResource( 6 )
 scene = "res://Stages/EmptyStage.tscn"
 
 [node name="LevelSelectButton6" parent="Control/TabContainer/Levels/HBoxContainer/LevelList/LevelListHBox" instance=ExtResource( 2 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 220.0
-margin_right = 190.0
-margin_bottom = 260.0
+margin_top = 161.0
+margin_right = 168.0
+margin_bottom = 201.0
 icon = ExtResource( 6 )
 scene = "res://Stages/EmptyStage.tscn"
 
 [node name="LevelSelectButton7" parent="Control/TabContainer/Levels/HBoxContainer/LevelList/LevelListHBox" instance=ExtResource( 2 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 264.0
-margin_right = 190.0
-margin_bottom = 304.0
+margin_top = 205.0
+margin_right = 168.0
+margin_bottom = 245.0
 icon = ExtResource( 6 )
 scene = "res://Stages/EmptyStage.tscn"
 
 [node name="LevelSelectButton8" parent="Control/TabContainer/Levels/HBoxContainer/LevelList/LevelListHBox" instance=ExtResource( 2 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 308.0
-margin_right = 190.0
-margin_bottom = 348.0
+margin_top = 249.0
+margin_right = 168.0
+margin_bottom = 289.0
 icon = ExtResource( 6 )
 scene = "res://Stages/EmptyStage.tscn"
 
 [node name="LevelSelectButton9" parent="Control/TabContainer/Levels/HBoxContainer/LevelList/LevelListHBox" instance=ExtResource( 2 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 352.0
-margin_right = 190.0
-margin_bottom = 392.0
+margin_top = 293.0
+margin_right = 168.0
+margin_bottom = 333.0
 icon = ExtResource( 6 )
 scene = "res://Stages/EmptyStage.tscn"
 
