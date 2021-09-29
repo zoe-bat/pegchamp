@@ -1,0 +1,56 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Menu/Theme.tres" type="Theme" id=1]
+[ext_resource path="res://Pegs/ScoreLabel.gd" type="Script" id=2]
+
+[sub_resource type="Animation" id=1]
+resource_name = "move_up"
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "delete"
+} ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Node2D:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -60 ), Vector2( 0, -64 ) ]
+}
+
+[node name="ScoreLabel" type="Node2D"]
+z_index = 1000
+script = ExtResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/move_up = SubResource( 1 )
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Label" type="Label" parent="Node2D"]
+margin_left = -0.010148
+margin_top = 0.00656128
+margin_right = 39.9899
+margin_bottom = 18.0066
+size_flags_horizontal = 3
+size_flags_vertical = 5
+theme = ExtResource( 1 )
+text = "69"
+max_lines_visible = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

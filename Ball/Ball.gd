@@ -39,6 +39,8 @@ func turn_pegs_green(collider):
 	if (collider.has_method("make_green")):
 		#if yes then do it
 		collider.make_green()
+	if GameStats.pinks_left <= 0:
+		$Sprite/WinParticles.visible = true
 
 func set_particle_direction(collider):
 	if (collider.has_method("set_particle_direction")):

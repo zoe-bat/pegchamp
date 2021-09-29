@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Menu/Buttons/RestartButton.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Menu/Icons/Play/Play2.png" type="Texture" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://Menu/Buttons/AudioSliders/MusicVolume2.png" type="Texture" id=14]
 [ext_resource path="res://Menu/Theme.tres" type="Theme" id=15]
 [ext_resource path="res://Menu/Buttons/Fullscreen/FullscreenButton.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Menu/Buttons/ButtonSFX.tscn" type="PackedScene" id=17]
 
 [node name="Pause" type="CanvasLayer"]
 pause_mode = 2
@@ -74,6 +75,8 @@ texture_normal = ExtResource( 8 )
 texture_pressed = ExtResource( 9 )
 texture_hover = ExtResource( 2 )
 
+[node name="ButtonSFX" parent="Pause/PanelContainer/HBoxContainer/VBoxContainer/Resume" instance=ExtResource( 17 )]
+
 [node name="SFX Volume" parent="Pause/PanelContainer/HBoxContainer" instance=ExtResource( 12 )]
 margin_top = 36.0
 margin_right = 140.0
@@ -92,4 +95,7 @@ bus_channel = "Music"
 
 [connection signal="pressed" from="Pause/PanelContainer/HBoxContainer/VBoxContainer/LevelSelectIconButton" to="Pause" method="_on_pause_button_pressed"]
 [connection signal="pressed" from="Pause/PanelContainer/HBoxContainer/VBoxContainer/RestartButton" to="Pause" method="_on_pause_button_pressed"]
+[connection signal="focus_entered" from="Pause/PanelContainer/HBoxContainer/VBoxContainer/Resume" to="Pause/PanelContainer/HBoxContainer/VBoxContainer/Resume/ButtonSFX" method="on_hover"]
+[connection signal="mouse_entered" from="Pause/PanelContainer/HBoxContainer/VBoxContainer/Resume" to="Pause/PanelContainer/HBoxContainer/VBoxContainer/Resume/ButtonSFX" method="on_hover"]
 [connection signal="pressed" from="Pause/PanelContainer/HBoxContainer/VBoxContainer/Resume" to="Pause" method="_on_pause_button_pressed"]
+[connection signal="pressed" from="Pause/PanelContainer/HBoxContainer/VBoxContainer/Resume" to="Pause/PanelContainer/HBoxContainer/VBoxContainer/Resume/ButtonSFX" method="on_select"]

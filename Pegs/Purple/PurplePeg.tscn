@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Pegs/Purple/PurplePeg.gd" type="Script" id=1]
 [ext_resource path="res://Pegs/Purple/purple.png" type="Texture" id=2]
 [ext_resource path="res://Pegs/DefaultPegCollisionShape.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Pegs/ScoreCounter.tscn" type="PackedScene" id=4]
 
 [node name="PurplePeg" type="StaticBody2D"]
 collision_mask = 0
@@ -12,3 +13,5 @@ script = ExtResource( 1 )
 texture = ExtResource( 2 )
 
 [node name="DefaultPegCollisionShape" parent="." instance=ExtResource( 3 )]
+
+[node name="ScoreCounter" parent="." instance=ExtResource( 4 )]

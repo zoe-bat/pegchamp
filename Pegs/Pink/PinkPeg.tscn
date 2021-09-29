@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Pegs/Pink/PinkPeg.gd" type="Script" id=1]
 [ext_resource path="res://Pegs/DefaultPegCollisionShape.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Pegs/Pink/Pink.png" type="Texture" id=3]
+[ext_resource path="res://Pegs/ScoreCounter.tscn" type="PackedScene" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 10.2018
@@ -35,6 +36,9 @@ collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LastPegCollision"]
 shape = SubResource( 2 )
+
+[node name="ScoreCounter" parent="." instance=ExtResource( 4 )]
+base_score = 10
 
 [connection signal="body_entered" from="RegularCollision" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="RegularCollision" to="." method="_on_Area2D_body_exited"]

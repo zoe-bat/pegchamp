@@ -9,6 +9,7 @@ func make_green():
 
 func explode():
 	if(can_be_exploded):
+		$ScoreCounter.trigger()
 		spawn_hit_particles(particle_emitting_direction)
 		queue_free()
 

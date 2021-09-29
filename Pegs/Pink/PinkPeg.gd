@@ -16,6 +16,9 @@ func make_green():
 	var main = get_tree().current_scene
 	main.add_child(green_peg)
 	
+	# add score
+	$ScoreCounter.trigger()
+	
 	#finally delete the old peg
 	GameStats.pinks_left -= 1
 	GameStats.add_to_multiplier()

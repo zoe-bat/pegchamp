@@ -8,6 +8,8 @@ func make_green():
 	green_bar.global_position = global_position
 	green_bar.global_rotation = global_rotation
 	
+	$ScoreCounter.trigger()
+	
 	main.add_child(green_bar)
 	GameStats.add_to_multiplier()
 	queue_free()

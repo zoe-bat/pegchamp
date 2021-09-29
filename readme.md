@@ -1,6 +1,6 @@
 # credits
 
-## \#1 pegchamp and wife
+## \#1 pegchamp, wife and voice acting
 
 [tess🐯](https://github.com/rawtess)
 

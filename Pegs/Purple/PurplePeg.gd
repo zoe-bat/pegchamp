@@ -10,6 +10,10 @@ func make_green():
 	# green_peg.rotation = rotation + 5
 	green_peg.global_position = global_position
 	
+	
+	# add score
+	$ScoreCounter.trigger()
+	
 	# get the main scene of current peg and add new peg to it
 	var main = get_tree().current_scene
 	main.add_child(green_peg)

@@ -1,13 +1,24 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Ball/sprite.png" type="Texture" id=1]
 [ext_resource path="res://Ball/Ball.gd" type="Script" id=2]
 [ext_resource path="res://Ball/Ball.tres" type="PhysicsMaterial" id=3]
 [ext_resource path="res://Ball/BallCollision.tscn" type="PackedScene" id=4]
 [ext_resource path="res://SFX/Scratch/BallReset.wav" type="AudioStream" id=5]
+[ext_resource path="res://Effects/greenParticle.png" type="Texture" id=6]
 
-[sub_resource type="Animation" id=1]
-resource_name = "reset"
+[sub_resource type="ParticlesMaterial" id=1]
+lifetime_randomness = 0.5
+emission_shape = 1
+emission_sphere_radius = 8.0
+flag_disable_z = true
+spread = 0.0
+gravity = Vector3( 0, -30, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = 20.0
+
+[sub_resource type="Animation" id=2]
 length = 1.5
 step = 0.05
 tracks/0/type = "method"
@@ -67,6 +78,15 @@ remote_path = NodePath("../../../Camera2D")
 position = Vector2( 0, -10 )
 texture = ExtResource( 1 )
 
+[node name="WinParticles" type="Particles2D" parent="Sprite"]
+visible = false
+z_index = 10
+amount = 64
+lifetime = 1.5
+local_coords = false
+process_material = SubResource( 1 )
+texture = ExtResource( 6 )
+
 [node name="BallCollision" parent="." instance=ExtResource( 4 )]
 visible = true
 
@@ -74,7 +94,7 @@ visible = true
 wait_time = 0.1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/reset = SubResource( 1 )
+anims/reset = SubResource( 2 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )

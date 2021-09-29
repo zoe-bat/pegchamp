@@ -198,3 +198,4 @@ scene = "res://Stages/EmptyStage.tscn"
 [node name="Transition" parent="." instance=ExtResource( 3 )]
 
 [node name="Cannon" parent="." instance=ExtResource( 4 )]
+visible = false

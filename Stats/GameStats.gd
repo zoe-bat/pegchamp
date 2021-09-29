@@ -10,6 +10,7 @@ var pinks_left = 0
 var level_won = false
 var current_stage = "res://Stages/EmptyStage.tscn"
 var multiplier = 1
+var score = 0
 
 func add_balls(balls):
 	balls_left += balls
@@ -40,6 +41,7 @@ func reset_board():
 	pinks_left = 0
 	level_won = false
 	multiplier = 1
+	score = 0
 	
 func set_current_scene(stage):
 	current_stage = stage
