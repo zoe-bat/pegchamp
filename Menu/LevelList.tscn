@@ -1,0 +1,111 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Menu/Theme.tres" type="Theme" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://Menu/Buttons/SceneSelectButton.tscn" type="PackedScene" id=5]
+
+[node name="LevelList" type="ScrollContainer"]
+margin_left = 176.0
+margin_right = 368.0
+margin_bottom = 165.0
+theme = ExtResource( 1 )
+follow_focus = true
+scroll_horizontal_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LevelListHBox" type="VBoxContainer" parent="."]
+margin_left = 2.0
+margin_top = 2.0
+margin_right = 170.0
+margin_bottom = 438.0
+
+[node name="SceneSelectButton" parent="LevelListHBox" instance=ExtResource( 5 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 168.0
+margin_bottom = 40.0
+icon = ExtResource( 2 )
+scene = "res://Stages/EmptyStage.tscn"
+
+[node name="SceneSelectButton2" parent="LevelListHBox" instance=ExtResource( 5 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 44.0
+margin_right = 168.0
+margin_bottom = 84.0
+icon = ExtResource( 2 )
+scene = "res://Stages/EmptyStage.tscn"
+
+[node name="SceneSelectButton3" parent="LevelListHBox" instance=ExtResource( 5 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 88.0
+margin_right = 168.0
+margin_bottom = 128.0
+icon = ExtResource( 2 )
+scene = "res://Stages/EmptyStage.tscn"
+
+[node name="SceneSelectButton4" parent="LevelListHBox" instance=ExtResource( 5 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 132.0
+margin_right = 168.0
+margin_bottom = 172.0
+icon = ExtResource( 2 )
+scene = "res://Stages/EmptyStage.tscn"
+
+[node name="SceneSelectButton5" parent="LevelListHBox" instance=ExtResource( 5 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 176.0
+margin_right = 168.0
+margin_bottom = 216.0
+icon = ExtResource( 2 )
+scene = "res://Stages/EmptyStage.tscn"
+
+[node name="SceneSelectButton6" parent="LevelListHBox" instance=ExtResource( 5 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 220.0
+margin_right = 168.0
+margin_bottom = 260.0
+icon = ExtResource( 2 )
+scene = "res://Stages/EmptyStage.tscn"
+
+[node name="SceneSelectButton7" parent="LevelListHBox" instance=ExtResource( 5 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 264.0
+margin_right = 168.0
+margin_bottom = 304.0
+icon = ExtResource( 2 )
+scene = "res://Stages/EmptyStage.tscn"
+
+[node name="SceneSelectButton8" parent="LevelListHBox" instance=ExtResource( 5 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 308.0
+margin_right = 168.0
+margin_bottom = 348.0
+icon = ExtResource( 2 )
+scene = "res://Stages/EmptyStage.tscn"
+
+[node name="SceneSelectButton9" parent="LevelListHBox" instance=ExtResource( 5 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 352.0
+margin_right = 168.0
+margin_bottom = 392.0
+icon = ExtResource( 2 )
+scene = "res://Stages/EmptyStage.tscn"
+
+[node name="SceneSelectButton10" parent="LevelListHBox" instance=ExtResource( 5 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 396.0
+margin_right = 168.0
+margin_bottom = 436.0
+icon = ExtResource( 2 )
+scene = "res://Stages/EmptyStage.tscn"

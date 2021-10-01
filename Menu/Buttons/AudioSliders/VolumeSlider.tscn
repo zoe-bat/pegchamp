@@ -16,4 +16,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[connection signal="focus_exited" from="." to="." method="save_volume"]
+[connection signal="mouse_exited" from="." to="." method="save_volume"]
 [connection signal="value_changed" from="." to="." method="_on_MusicVolumeSlider_value_changed"]

@@ -6,9 +6,8 @@ export var already_beaten = false
 
 func _ready():
 	load_level()
-	$Killzone.connect("level_just_won", self, "save_level")
+	var _killzone_connec = $Killzone.connect("level_just_won", self, "save_level")
 	GameStats.multiplier = 1
-	print(high_score)
 
 func _physics_process(_delta):
 	fast_forward()
@@ -43,7 +42,7 @@ func save_level():
 	
 	
 	if GameStats.score > high_score:
-		print("New High score!")
+		# new highscore!!!
 		high_score = GameStats.score
 	
 	var data = {

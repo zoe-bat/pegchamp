@@ -7,7 +7,9 @@ func _ready():
 
 func save_game():
 	var data = {
-		"unlock_points" : GameStats.unlock_points
+		"unlock_points" : GameStats.unlock_points,
+		"music_volume" : AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Music")),
+		"sfx_volume" : AudioServer.get_bus_volume_db(AudioServer.get_bus_index("SFX"))
 	}
 	
 	print(data)
@@ -26,6 +28,11 @@ func load_game():
 			var data = file.get_var()
 			file.close()
 			load_unlock_points(data)
+			load_volume(data)
 
 func load_unlock_points(data):
 	GameStats.unlock_points = data.unlock_points
+
+func load_volume(data):
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("SFX"),  data.sfx_volume)
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Music"),  data.music_volume)
