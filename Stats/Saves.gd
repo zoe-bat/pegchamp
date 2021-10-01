@@ -12,8 +12,6 @@ func save_game():
 		"sfx_volume" : AudioServer.get_bus_volume_db(AudioServer.get_bus_index("SFX"))
 	}
 	
-	print(data)
-	
 	var file = File.new()
 	var err = file.open(save_path, File.WRITE)
 	if err == OK:
