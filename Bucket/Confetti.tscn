@@ -93,5 +93,6 @@ texture = ExtResource( 7 )
 stream = ExtResource( 8 )
 volume_db = 4.0
 autoplay = true
+bus = "SFX"
 
 [connection signal="timeout" from="KillTimer" to="." method="_on_KillTimer_timeout"]

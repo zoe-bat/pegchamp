@@ -83,7 +83,7 @@ func spawn_trajectory_dots():
 		can_spawn_trajectory_dot = true
 		trajectoryTimer.start()
 func reset_ball():
-	GameStats.multiplier = 1
+	GameStats.set_multiplier(1)
 	# delete the ball when the level is won, so it doesn't respawn
 	if GameStats.level_won:
 		queue_free()

@@ -15,13 +15,11 @@ func make_green():
 	# get the main scene of current peg and add new peg to it
 	var main = get_tree().current_scene
 	main.add_child(green_peg)
-	
 	# add score
 	$ScoreCounter.trigger()
 	
 	#finally delete the old peg
 	GameStats.pinks_left -= 1
-	GameStats.add_to_multiplier()
 	win_level()
 	Engine.time_scale = 1
 	queue_free()

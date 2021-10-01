@@ -13,3 +13,4 @@ bus = "SFX"
 
 [node name="Select" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
+bus = "SFX"

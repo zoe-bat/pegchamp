@@ -17,9 +17,7 @@ func make_green():
 	# get the main scene of current peg and add new peg to it
 	var main = get_tree().current_scene
 	main.add_child(green_peg)
-	
-	# increase multiplyier
-	GameStats.add_to_multiplier()
+
 	
 	#finally delete the old peg
 	queue_free()

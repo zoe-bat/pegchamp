@@ -49,5 +49,6 @@ shape = SubResource( 2 )
 anims/spawn = SubResource( 3 )
 
 [node name="ScoreCounter" parent="." instance=ExtResource( 5 )]
+base_multiplier = 0
 
 [connection signal="timeout" from="GraceTimer" to="." method="_on_GraceTimer_timeout"]

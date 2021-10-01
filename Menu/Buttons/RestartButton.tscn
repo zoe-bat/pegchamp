@@ -21,5 +21,5 @@ __meta__ = {
 
 [connection signal="focus_entered" from="." to="ButtonSFX" method="on_hover"]
 [connection signal="mouse_entered" from="." to="ButtonSFX" method="on_hover"]
-[connection signal="pressed" from="." to="ButtonSFX" method="on_select"]
 [connection signal="pressed" from="." to="." method="_on_RestartButton_pressed"]
+[connection signal="pressed" from="." to="ButtonSFX" method="on_select"]

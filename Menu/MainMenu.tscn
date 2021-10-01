@@ -105,7 +105,6 @@ __meta__ = {
 [node name="LevelInfo" parent="Control/TabContainer/Levels/HBoxContainer" instance=ExtResource( 7 )]
 margin_left = 157.0
 margin_right = 172.0
-alignment = 1
 
 [node name="LevelList" type="ScrollContainer" parent="Control/TabContainer/Levels/HBoxContainer"]
 margin_left = 176.0

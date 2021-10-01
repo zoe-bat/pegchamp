@@ -7,8 +7,16 @@
 [ext_resource path="res://Menu/Buttons/ButtonSFX.tscn" type="PackedScene" id=5]
 
 [node name="PlayButton" type="TextureButton"]
-margin_right = 40.0
-margin_bottom = 40.0
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -384.0
+margin_top = -216.0
+margin_right = -352.0
+margin_bottom = -184.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
 texture_normal = ExtResource( 3 )
 texture_pressed = ExtResource( 1 )
 texture_hover = ExtResource( 2 )
@@ -21,5 +29,5 @@ __meta__ = {
 
 [connection signal="focus_entered" from="." to="ButtonSFX" method="on_hover"]
 [connection signal="mouse_entered" from="." to="ButtonSFX" method="on_hover"]
-[connection signal="pressed" from="." to="." method="_on_PlayButton_pressed"]
 [connection signal="pressed" from="." to="ButtonSFX" method="on_select"]
+[connection signal="pressed" from="." to="." method="_on_PlayButton_pressed"]

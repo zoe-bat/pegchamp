@@ -45,5 +45,6 @@ script = ExtResource( 5 )
 [node name="GraceTimer" parent="." instance=ExtResource( 3 )]
 
 [node name="ScoreCounter" parent="." instance=ExtResource( 7 )]
+base_multiplier = 0
 
 [connection signal="timeout" from="GraceTimer" to="." method="_on_GraceTimer_timeout"]

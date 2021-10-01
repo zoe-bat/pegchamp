@@ -54,18 +54,18 @@ anchor_bottom = 0.0
 margin_right = 32.0
 margin_bottom = 32.0
 
-[node name="LevelSelectIconButton" parent="Pause/PanelContainer/HBoxContainer/VBoxContainer" instance=ExtResource( 6 )]
+[node name="RestartButton" parent="Pause/PanelContainer/HBoxContainer/VBoxContainer" instance=ExtResource( 1 )]
 margin_left = 36.0
 margin_right = 68.0
+margin_bottom = 32.0
+
+[node name="LevelSelectIconButton" parent="Pause/PanelContainer/HBoxContainer/VBoxContainer" instance=ExtResource( 6 )]
+margin_left = 72.0
+margin_right = 104.0
 margin_bottom = 32.0
 texture_normal = ExtResource( 3 )
 texture_pressed = ExtResource( 5 )
 texture_hover = ExtResource( 4 )
-
-[node name="RestartButton" parent="Pause/PanelContainer/HBoxContainer/VBoxContainer" instance=ExtResource( 1 )]
-margin_left = 72.0
-margin_right = 104.0
-margin_bottom = 32.0
 
 [node name="Resume" type="TextureButton" parent="Pause/PanelContainer/HBoxContainer/VBoxContainer"]
 margin_left = 108.0
@@ -93,8 +93,8 @@ custom_icons/grabber_highlight = ExtResource( 14 )
 custom_icons/grabber = ExtResource( 13 )
 bus_channel = "Music"
 
-[connection signal="pressed" from="Pause/PanelContainer/HBoxContainer/VBoxContainer/LevelSelectIconButton" to="Pause" method="_on_pause_button_pressed"]
 [connection signal="pressed" from="Pause/PanelContainer/HBoxContainer/VBoxContainer/RestartButton" to="Pause" method="_on_pause_button_pressed"]
+[connection signal="pressed" from="Pause/PanelContainer/HBoxContainer/VBoxContainer/LevelSelectIconButton" to="Pause" method="_on_pause_button_pressed"]
 [connection signal="focus_entered" from="Pause/PanelContainer/HBoxContainer/VBoxContainer/Resume" to="Pause/PanelContainer/HBoxContainer/VBoxContainer/Resume/ButtonSFX" method="on_hover"]
 [connection signal="mouse_entered" from="Pause/PanelContainer/HBoxContainer/VBoxContainer/Resume" to="Pause/PanelContainer/HBoxContainer/VBoxContainer/Resume/ButtonSFX" method="on_hover"]
 [connection signal="pressed" from="Pause/PanelContainer/HBoxContainer/VBoxContainer/Resume" to="Pause" method="_on_pause_button_pressed"]

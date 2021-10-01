@@ -2,6 +2,8 @@ extends Node
 
 signal balls_changed()
 signal current_stage_changed(scene)
+signal multiplier_changed(value)
+signal score_changed(value)
 
 var unlock_points = 10
 var max_balls = 8
@@ -37,19 +39,33 @@ func restart_level():
 	reset_board()
 
 func reset_board():
+	multiplier = 1
+	score = 0
 	balls_left = max_balls
 	pinks_left = 0
 	level_won = false
-	multiplier = 1
-	score = 0
+
 	
 func set_current_scene(stage):
 	current_stage = stage
 	emit_signal("current_stage_changed", current_stage)
 	
-func add_to_multiplier():
-	var SFXPlayer = load("res://SFX/SFXPlayer.tscn")
-	var sfx_player = SFXPlayer.instance()
-	var main = get_tree().current_scene
-	main.add_child(sfx_player)
-	multiplier += 1
+func add_to_multiplier(value):
+	if value + GameStats.multiplier > GameStats.multiplier:
+		var SFXPlayer = load("res://SFX/SFXPlayer.tscn")
+		var sfx_player = SFXPlayer.instance()
+		var main = get_tree().current_scene
+		main.add_child(sfx_player)
+	
+	multiplier += value
+	emit_signal("multiplier_changed", multiplier)
+
+func set_multiplier(value):
+	multiplier = value
+	emit_signal("multiplier_changed", multiplier)
+
+
+func set_score_to(value):
+	score = value
+	emit_signal("score_changed", score)
+

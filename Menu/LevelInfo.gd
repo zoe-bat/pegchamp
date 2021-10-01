@@ -1,12 +1,26 @@
-extends VBoxContainer
+extends PanelContainer
+
+onready var stage_label = $CenterContainer/HBoxContainer/VBoxContainer/StageName
+onready var score = $CenterContainer/HBoxContainer/VBoxContainer/ScoreLabel
+onready var play = $CenterContainer/HBoxContainer/PlayButton
 
 func _ready():
 	var _game_stats = GameStats.connect("current_stage_changed", self, "update_info")
 
 func update_info(stage):
-	$HBoxContainer/PlayButton.disabled = false
+	play.disabled = false
 	var Stage = load(stage)
 	stage = Stage.instance()
 	
-	$ScoreLabel.text = stage.stage_name
-	$HBoxContainer/PlayButton.visible = true
+	score.text = String(stage.high_score)
+	play.visible = true
+	
+	var filename = "user://" + stage.stage_name + ".dat"
+	var file = File.new()
+	if file.file_exists(filename):
+		var err = file.open(filename, File.READ)
+		if err == OK:
+			var data = file.get_var()
+			file.close()
+			score.text = String(data.high_score)
+			stage_label.text = String(stage.stage_name)

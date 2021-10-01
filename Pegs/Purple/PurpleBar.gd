@@ -11,7 +11,6 @@ func make_green():
 	$ScoreCounter.trigger()
 	
 	main.add_child(green_bar)
-	GameStats.add_to_multiplier()
 	queue_free()
 
 func bouncy():
