@@ -5,6 +5,7 @@
 [ext_resource path="res://SFX/Scratch/Fadeout.ogg" type="AudioStream" id=3]
 
 [node name="FadeOut" instance=ExtResource( 1 )]
+pause_mode = 2
 script = ExtResource( 2 )
 
 [node name="FadeoutSound" type="AudioStreamPlayer" parent="AnimationPlayer" index="0"]

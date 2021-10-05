@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Menu/Theme.tres" type="Theme" id=1]
+[ext_resource path="res://Menu/Icons/cameraFX/CameraMovement1.png" type="Texture" id=2]
+[ext_resource path="res://Menu/Buttons/CameraFXButton.gd" type="Script" id=3]
+[ext_resource path="res://Menu/Buttons/ButtonSFX.tscn" type="PackedScene" id=4]
+
+[node name="CameraFXButton" type="CheckBox"]
+margin_left = 290.0
+margin_right = 368.0
+margin_bottom = 40.0
+size_flags_horizontal = 3
+theme = ExtResource( 1 )
+pressed = true
+icon = ExtResource( 2 )
+align = 2
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonSFX" parent="." instance=ExtResource( 4 )]
+
+[connection signal="focus_entered" from="." to="ButtonSFX" method="on_hover"]
+[connection signal="mouse_entered" from="." to="ButtonSFX" method="on_hover"]
+[connection signal="pressed" from="." to="ButtonSFX" method="on_select"]
+[connection signal="toggled" from="." to="." method="_on_CameraFXButton_toggled"]

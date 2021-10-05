@@ -9,3 +9,5 @@ func set_balls():
 		var old_region_size = get_region_rect().size.y
 		var new_region = Rect2(0, 0, old_region_size * GameStats.balls_left - old_region_size, old_region_size)
 		set_region_rect(new_region)
+		visible = true
+	else: visible = false

@@ -4,6 +4,7 @@
 [ext_resource path="res://Music/Music.gd" type="Script" id=2]
 
 [node name="Jukebox" type="AudioStreamPlayer"]
+pause_mode = 2
 stream = ExtResource( 1 )
 autoplay = true
 bus = "Music"

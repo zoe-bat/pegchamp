@@ -33,14 +33,15 @@ func bouncy():
 
 # below is the slowmo stuff
 func _on_Area2D_body_entered(_body):
-	Engine.time_scale = clamp(Engine.time_scale * 0.25, 0.1, 1)
-	$SlowmoTimer.start()
+	if GameStats.camera_fx:
+		Engine.time_scale = clamp(Engine.time_scale * 0.25, 0.1, 1)
+		$SlowmoTimer.start()
 
 func _on_Area2D_body_exited(_body):
 	Engine.time_scale = 1
 
 func _on_LastPegCollision_body_entered(_body):
-	if GameStats.pinks_left <= 1:
+	if GameStats.pinks_left <= 1 && GameStats.camera_fx:
 		Engine.time_scale = clamp(Engine.time_scale * 0.15, 0.1, 1)
 		$SlowmoTimer.start()
 

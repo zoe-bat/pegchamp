@@ -5,6 +5,7 @@ func _process(_delta):
 		_on_pause_button_pressed()
 
 func _on_pause_button_pressed():
-	if !GameStats.level_won:
+	if !GameStats.level_won && !GameStats.powerup_screen_active:
 		get_tree().paused = !get_tree().paused
 		visible = !visible
+		Engine.time_scale = 1

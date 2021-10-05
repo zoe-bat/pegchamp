@@ -59,6 +59,9 @@ func aim():
 		
 		state = FALL
 		
+		# stop showing arrow
+		$Arrow.visible = false
+		
 		# calculate shot speed and direction
 		var direction = get_local_mouse_position().normalized()
 		var speed = position.distance_to(get_global_mouse_position())
@@ -97,3 +100,4 @@ func reset_ball():
 		animation.play("reset")
 func reset_done():
 	state = AIM
+	$Arrow.visible = true

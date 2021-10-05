@@ -8,4 +8,5 @@ func _ready():
 	$AnimationPlayer.play("FadeOut")
 
 func finish_animation():
+	get_tree().paused = false
 	var _new_scene = get_tree().change_scene(scene_to_load)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Ball/sprite.png" type="Texture" id=1]
 [ext_resource path="res://Ball/Ball.gd" type="Script" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://Ball/BallCollision.tscn" type="PackedScene" id=4]
 [ext_resource path="res://SFX/Scratch/BallReset.wav" type="AudioStream" id=5]
 [ext_resource path="res://Effects/greenParticle.png" type="Texture" id=6]
+[ext_resource path="res://Ball/aimingArrow.png" type="Texture" id=7]
+[ext_resource path="res://Ball/Arrow.gd" type="Script" id=8]
 
 [sub_resource type="ParticlesMaterial" id=1]
 lifetime_randomness = 0.5
@@ -99,5 +101,10 @@ anims/reset = SubResource( 2 )
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
 bus = "SFX"
+
+[node name="Arrow" type="Sprite" parent="."]
+texture = ExtResource( 7 )
+offset = Vector2( 4, 0 )
+script = ExtResource( 8 )
 
 [connection signal="timeout" from="TrajectoryTimer" to="." method="_on_TrajectoryTimer_timeout"]

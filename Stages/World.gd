@@ -34,11 +34,10 @@ func load_data(data):
 	
 	
 func save_level():
-	print("saving game")
 	if !already_beaten:
 		GameStats.unlock_points += 10
 		already_beaten = true
-	else: GameStats.unlock_points += 1
+	else: GameStats.unlock_points += 5
 	
 	
 	if GameStats.score > high_score:

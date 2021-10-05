@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Menu/Theme.tres" type="Theme" id=1]
 [ext_resource path="res://Menu/LevelList.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Effects/FadeIn.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Cannon/Cannon.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Menu/Buttons/Fullscreen/FullscreenButton.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Menu/Buttons/CameraFXButton.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Menu/LevelInfo.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Menu/Buttons/AudioSliders/VolumeSlider.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Menu/Buttons/AudioSliders/MusicVolume1.png" type="Texture" id=10]
@@ -55,21 +56,26 @@ __meta__ = {
 }
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Control/TabContainer/Main Menu/VBoxContainer"]
-margin_top = 133.0
+margin_top = 125.0
 margin_right = 368.0
 margin_bottom = 165.0
 alignment = 1
 
 [node name="SFX Volume" parent="Control/TabContainer/Main Menu/VBoxContainer/HBoxContainer" instance=ExtResource( 9 )]
-margin_left = 64.0
-margin_right = 164.0
+margin_right = 100.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 100, 40 )
 custom_icons/grabber_highlight = ExtResource( 13 )
 custom_icons/grabber = ExtResource( 12 )
 bus_channel = "SFX"
 
 [node name="Music Volume" parent="Control/TabContainer/Main Menu/VBoxContainer/HBoxContainer" instance=ExtResource( 9 )]
-margin_left = 168.0
-margin_right = 268.0
+margin_left = 104.0
+margin_right = 204.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 100, 40 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
 custom_icons/grabber_highlight = ExtResource( 11 )
 custom_icons/grabber = ExtResource( 10 )
 bus_channel = "Music"
@@ -77,9 +83,15 @@ bus_channel = "Music"
 [node name="FullscreenButton" parent="Control/TabContainer/Main Menu/VBoxContainer/HBoxContainer" instance=ExtResource( 5 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 272.0
-margin_right = 304.0
-margin_bottom = 32.0
+margin_left = 208.0
+margin_right = 286.0
+margin_bottom = 40.0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme = ExtResource( 1 )
+align = 2
+
+[node name="CameraFXButton" parent="Control/TabContainer/Main Menu/VBoxContainer/HBoxContainer" instance=ExtResource( 6 )]
 
 [node name="Levels" type="Tabs" parent="Control/TabContainer"]
 visible = false
@@ -95,19 +107,20 @@ theme = ExtResource( 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 custom_constants/separation = 4
-alignment = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="LevelList" parent="Control/TabContainer/Levels/HBoxContainer" instance=ExtResource( 2 )]
+margin_left = 0.0
+margin_right = 192.0
+
 [node name="LevelInfo" parent="Control/TabContainer/Levels/HBoxContainer" instance=ExtResource( 7 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 55.0
-margin_right = 172.0
+margin_left = 196.0
+margin_right = 313.0
 margin_bottom = 165.0
-
-[node name="LevelList" parent="Control/TabContainer/Levels/HBoxContainer" instance=ExtResource( 2 )]
 
 [node name="Transition" parent="." instance=ExtResource( 3 )]
 
