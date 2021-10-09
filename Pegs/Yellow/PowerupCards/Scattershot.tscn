@@ -1,6 +1,29 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Pegs/Yellow/PowerupCard.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Pegs/Yellow/Powerups/Scattershot/Scattershot.png" type="Texture" id=2]
+[ext_resource path="res://Pegs/Yellow/yellow.png" type="Texture" id=3]
+[ext_resource path="res://Pegs/Yellow/Powerups/Scattershot/ScattershoPortalt.png" type="Texture" id=4]
 
 [node name="Scattershot" instance=ExtResource( 1 )]
 hint_tooltip = "scattershot!"
+
+[node name="Sprite5" type="Sprite" parent="." index="0"]
+position = Vector2( 32, 32 )
+texture = ExtResource( 4 )
+hframes = 6
+
+[node name="Sprite" parent="." index="1"]
+texture = ExtResource( 3 )
+
+[node name="Sprite2" type="Sprite" parent="." index="2"]
+position = Vector2( 46, 40 )
+texture = ExtResource( 2 )
+
+[node name="Sprite3" type="Sprite" parent="." index="3"]
+position = Vector2( 48, 12 )
+texture = ExtResource( 2 )
+
+[node name="Sprite4" type="Sprite" parent="." index="4"]
+position = Vector2( 13, 18 )
+texture = ExtResource( 2 )

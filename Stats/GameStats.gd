@@ -18,6 +18,8 @@ var camera_fx = true
 var bonus_points = 0
 var best_combo = 1
 var powerup_screen_active = false
+var current_powerup = "res://Pegs/Yellow/Powerups/Scattershot/Scattershot.tscn"
+var stage_powerup = "res://Pegs/Yellow/PowerupCards/Scattershot.tscn"
 
 func add_balls(balls):
 	balls_left += balls

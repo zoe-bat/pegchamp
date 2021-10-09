@@ -18,11 +18,12 @@ func make_green():
 	var main = get_tree().current_scene
 	main.add_child(green_peg)
 	
-	var Powerups = preload("res://Pegs/Yellow/PowerupCards.tscn")
-	var powerups = Powerups.instance()
-	powerups.position = global_position
+	var Powerup = load(GameStats.current_powerup)
+	var powerup = Powerup.instance()
 	
-	main.add_child(powerups)
+	powerup.global_position = global_position
+	
+	main.add_child(powerup)
 	
 	#finally delete the old peg
 	queue_free()

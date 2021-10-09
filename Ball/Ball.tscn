@@ -90,7 +90,6 @@ process_material = SubResource( 1 )
 texture = ExtResource( 6 )
 
 [node name="BallCollision" parent="." instance=ExtResource( 4 )]
-visible = true
 
 [node name="TrajectoryTimer" type="Timer" parent="."]
 wait_time = 0.1
@@ -103,6 +102,7 @@ stream = ExtResource( 5 )
 bus = "SFX"
 
 [node name="Arrow" type="Sprite" parent="."]
+pause_mode = 2
 texture = ExtResource( 7 )
 offset = Vector2( 4, 0 )
 script = ExtResource( 8 )

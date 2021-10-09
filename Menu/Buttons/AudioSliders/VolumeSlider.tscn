@@ -19,10 +19,10 @@ __meta__ = {
 
 [node name="ButtonSFX" parent="." instance=ExtResource( 3 )]
 
+[connection signal="changed" from="." to="." method="save_volume"]
 [connection signal="focus_entered" from="." to="ButtonSFX" method="on_hover"]
 [connection signal="focus_exited" from="." to="." method="save_volume"]
 [connection signal="focus_exited" from="." to="ButtonSFX" method="on_select"]
 [connection signal="mouse_entered" from="." to="ButtonSFX" method="on_hover"]
-[connection signal="mouse_exited" from="." to="." method="save_volume"]
 [connection signal="mouse_exited" from="." to="ButtonSFX" method="on_select"]
 [connection signal="value_changed" from="." to="." method="_on_MusicVolumeSlider_value_changed"]
