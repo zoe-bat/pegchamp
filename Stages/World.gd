@@ -3,6 +3,7 @@ extends Node2D
 export var stage_name = "test stage"
 export var high_score = 0
 export var already_beaten = false
+export var powerup_card = "res://Pegs/Yellow/PowerupCards/ExtraBall.tscn"
 
 func _ready():
 	load_level()

@@ -26,6 +26,7 @@ func moveup():
 
 func movedown():
 	var _collide = move_and_collide(Vector2(0, 5))
+	GameStats.set_multiplier(1)
 
 func _on_ZoneDetection_area_entered(_area):
 	if (state == MOVEUP):

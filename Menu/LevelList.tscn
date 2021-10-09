@@ -28,6 +28,7 @@ margin_right = 168.0
 margin_bottom = 40.0
 icon = ExtResource( 2 )
 scene = "res://Stages/EmptyStage.tscn"
+powerup_card = "res://Pegs/Yellow/PowerupCards/Scattershot.tscn"
 
 [node name="SceneSelectButton2" parent="LevelListHBox" instance=ExtResource( 5 )]
 anchor_right = 0.0

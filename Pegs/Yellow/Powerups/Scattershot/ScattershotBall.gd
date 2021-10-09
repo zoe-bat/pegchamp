@@ -11,7 +11,7 @@ func _ready() -> void:
 func _physics_process(_delta):
 	var collider_array = get_colliding_bodies()
 	for collider in collider_array:
-		set_particle_direction(collider)
+		set_particle_direction_for(collider)
 		turn_pegs_green(collider)
 
 func turn_pegs_green(collider):
@@ -20,10 +20,9 @@ func turn_pegs_green(collider):
 		#if yes then do it
 		collider.make_green()
 		if can_be_deleted:
-			spawn_particles()
-			queue_free()
+			explode()
 
-func set_particle_direction(collider):
+func set_particle_direction_for(collider):
 	if (collider.has_method("set_particle_direction")):
 		collider.set_particle_direction(linear_velocity.normalized() * -1)
 
@@ -39,3 +38,7 @@ func spawn_particles():
 		var main = get_tree().current_scene
 		particles.global_position = global_position
 		main.add_child(particles)
+
+func explode():
+	spawn_particles()
+	queue_free()

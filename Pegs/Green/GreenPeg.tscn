@@ -43,7 +43,7 @@ script = ExtResource( 5 )
 [node name="HitSFX" parent="." instance=ExtResource( 6 )]
 
 [node name="GraceTimer" parent="." instance=ExtResource( 3 )]
-wait_time = 0.24
+wait_time = 1.0
 
 [node name="ScoreCounter" parent="." instance=ExtResource( 7 )]
 base_multiplier = 0

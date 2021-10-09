@@ -258,4 +258,7 @@ position = Vector2( 30, 124 )
 
 [node name="PowerupCards" parent="." instance=ExtResource( 15 )]
 
+[node name="YellowPeg2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 298, 53 )
+
 [editable path="Ball"]
