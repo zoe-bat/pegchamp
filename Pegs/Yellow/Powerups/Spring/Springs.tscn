@@ -1,0 +1,58 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Pegs/Yellow/Powerups/Spring/Spring.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Pegs/Yellow/Powerups/Spring/Springs.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 192, 16 )
+
+[node name="Springs" type="StaticBody2D"]
+z_index = -24
+collision_layer = 8
+collision_mask = 0
+script = ExtResource( 2 )
+
+[node name="Spring" parent="." instance=ExtResource( 1 )]
+
+[node name="Spring2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 32, 0 )
+
+[node name="Spring3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 64, 0 )
+
+[node name="Spring4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 96, 0 )
+
+[node name="Spring5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 128, 0 )
+
+[node name="Spring6" parent="." instance=ExtResource( 1 )]
+position = Vector2( 160, 0 )
+
+[node name="Spring7" parent="." instance=ExtResource( 1 )]
+position = Vector2( 192, 0 )
+
+[node name="Spring8" parent="." instance=ExtResource( 1 )]
+position = Vector2( 224, 0 )
+
+[node name="Spring9" parent="." instance=ExtResource( 1 )]
+position = Vector2( 256, 0 )
+
+[node name="Spring10" parent="." instance=ExtResource( 1 )]
+position = Vector2( 288, 0 )
+
+[node name="Spring11" parent="." instance=ExtResource( 1 )]
+position = Vector2( 320, 0 )
+
+[node name="Spring12" parent="." instance=ExtResource( 1 )]
+position = Vector2( 352, 0 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2( 192, 16 )
+shape = SubResource( 1 )
+
+[node name="DeathTimer" type="Timer" parent="."]
+wait_time = 0.24
+one_shot = true
+
+[connection signal="timeout" from="DeathTimer" to="." method="explode"]

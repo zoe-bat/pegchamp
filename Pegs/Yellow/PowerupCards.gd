@@ -5,7 +5,7 @@ var scenes = []
 func _ready():
 	GameStats.connect("powerup_picked", self, "queue_free")
 	scenes.append("res://Pegs/Yellow/PowerupCards/Scattershot.tscn")
-	scenes.append("res://Pegs/Yellow/PowerupCards/ExtraBall.tscn")
+	scenes.append("res://Pegs/Yellow/PowerupCards/Spring.tscn")
 	
 	spawn_powerups(2)
 	get_tree().paused = true

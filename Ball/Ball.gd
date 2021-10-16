@@ -47,8 +47,10 @@ func set_particle_direction(collider):
 		collider.set_particle_direction(linear_velocity.normalized() * -1)
 
 func bounce_of(collider):
-	if (collider.has_method("bouncy")):
+	if collider.has_method("bouncy"):
 		apply_central_impulse(linear_velocity.normalized() * shotspeed / 6)
+	if (collider).has_method("spring"):
+		apply_central_impulse(Vector2(0, -64))
 
 func aim():
 	cameraTransform.position = Vector2.ZERO + get_local_mouse_position().normalized() * 10
