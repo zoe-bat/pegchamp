@@ -23,6 +23,15 @@ func make_green():
 	
 	powerup.global_position = global_position
 	
+	# has to run before adding powerup as child 
+	# because adding the powerup changes powerup_active to true
+	if !GameStats.powerup_active:
+		var SFX = preload("res://Pegs/Yellow/Powerups/PowerupSFX.tscn")
+		var sfx = SFX.instance()
+		main.add_child(sfx)
+		sfx.global_position = global_position
+		sfx.play(0)
+	
 	main.add_child(powerup)
 	
 	#finally delete the old peg

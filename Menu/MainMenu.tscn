@@ -1,9 +1,9 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Menu/Theme.tres" type="Theme" id=1]
 [ext_resource path="res://Menu/LevelList.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Effects/FadeIn.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Cannon/Cannon.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Menu/MainMenuCam.gd" type="Script" id=4]
 [ext_resource path="res://Menu/Buttons/Fullscreen/FullscreenButton.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Menu/Buttons/CameraFXButton.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Menu/LevelInfo.tscn" type="PackedScene" id=7]
@@ -12,10 +12,13 @@
 [ext_resource path="res://Menu/Buttons/AudioSliders/MusicVolume2.png" type="Texture" id=11]
 [ext_resource path="res://Menu/Buttons/AudioSliders/SFXVolume1.png" type="Texture" id=12]
 [ext_resource path="res://Menu/Buttons/AudioSliders/SFXVolume2.png" type="Texture" id=13]
+[ext_resource path="res://Effects/Background.tscn" type="PackedScene" id=14]
 
-[node name="CanvasLayer" type="CanvasLayer"]
+[node name="Node2D" type="Node2D"]
 
-[node name="Control" type="Control" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -27,7 +30,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TabContainer" type="TabContainer" parent="Control"]
+[node name="TabContainer" type="TabContainer" parent="CanvasLayer/Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 theme = ExtResource( 1 )
@@ -38,7 +41,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Main Menu" type="Tabs" parent="Control/TabContainer"]
+[node name="Main Menu" type="Tabs" parent="CanvasLayer/Control/TabContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -47,7 +50,7 @@ margin_right = -4.0
 margin_bottom = -4.0
 theme = ExtResource( 1 )
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/TabContainer/Main Menu"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/TabContainer/Main Menu"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 alignment = 2
@@ -55,13 +58,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Control/TabContainer/Main Menu/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/TabContainer/Main Menu/VBoxContainer"]
 margin_top = 125.0
 margin_right = 368.0
 margin_bottom = 165.0
 alignment = 1
 
-[node name="SFX Volume" parent="Control/TabContainer/Main Menu/VBoxContainer/HBoxContainer" instance=ExtResource( 9 )]
+[node name="SFX Volume" parent="CanvasLayer/Control/TabContainer/Main Menu/VBoxContainer/HBoxContainer" instance=ExtResource( 9 )]
 margin_right = 100.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 100, 40 )
@@ -69,7 +72,7 @@ custom_icons/grabber_highlight = ExtResource( 13 )
 custom_icons/grabber = ExtResource( 12 )
 bus_channel = "SFX"
 
-[node name="Music Volume" parent="Control/TabContainer/Main Menu/VBoxContainer/HBoxContainer" instance=ExtResource( 9 )]
+[node name="Music Volume" parent="CanvasLayer/Control/TabContainer/Main Menu/VBoxContainer/HBoxContainer" instance=ExtResource( 9 )]
 margin_left = 104.0
 margin_right = 204.0
 margin_bottom = 40.0
@@ -80,7 +83,7 @@ custom_icons/grabber_highlight = ExtResource( 11 )
 custom_icons/grabber = ExtResource( 10 )
 bus_channel = "Music"
 
-[node name="FullscreenButton" parent="Control/TabContainer/Main Menu/VBoxContainer/HBoxContainer" instance=ExtResource( 5 )]
+[node name="FullscreenButton" parent="CanvasLayer/Control/TabContainer/Main Menu/VBoxContainer/HBoxContainer" instance=ExtResource( 5 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 208.0
@@ -91,9 +94,9 @@ size_flags_vertical = 4
 theme = ExtResource( 1 )
 align = 2
 
-[node name="CameraFXButton" parent="Control/TabContainer/Main Menu/VBoxContainer/HBoxContainer" instance=ExtResource( 6 )]
+[node name="CameraFXButton" parent="CanvasLayer/Control/TabContainer/Main Menu/VBoxContainer/HBoxContainer" instance=ExtResource( 6 )]
 
-[node name="Levels" type="Tabs" parent="Control/TabContainer"]
+[node name="Levels" type="Tabs" parent="CanvasLayer/Control/TabContainer"]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -103,7 +106,7 @@ margin_right = -4.0
 margin_bottom = -4.0
 theme = ExtResource( 1 )
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Control/TabContainer/Levels"]
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/TabContainer/Levels"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 custom_constants/separation = 4
@@ -111,18 +114,30 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="LevelList" parent="Control/TabContainer/Levels/HBoxContainer" instance=ExtResource( 2 )]
+[node name="LevelList" parent="CanvasLayer/Control/TabContainer/Levels/HBoxContainer" instance=ExtResource( 2 )]
 margin_left = 0.0
 margin_right = 192.0
 
-[node name="LevelInfo" parent="Control/TabContainer/Levels/HBoxContainer" instance=ExtResource( 7 )]
+[node name="LevelInfo" parent="CanvasLayer/Control/TabContainer/Levels/HBoxContainer" instance=ExtResource( 7 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 196.0
 margin_right = 313.0
 margin_bottom = 165.0
 
-[node name="Transition" parent="." instance=ExtResource( 3 )]
+[node name="Transition" parent="CanvasLayer" instance=ExtResource( 3 )]
 
-[node name="Cannon" parent="." instance=ExtResource( 4 )]
-visible = false
+[node name="MainMenuCam" type="Camera2D" parent="."]
+pause_mode = 2
+current = true
+zoom = Vector2( 0.975, 0.975 )
+limit_left = 0
+limit_top = 0
+limit_right = 384
+limit_bottom = 216
+limit_smoothed = true
+smoothing_enabled = true
+smoothing_speed = 2.4
+script = ExtResource( 4 )
+
+[node name="Background" parent="." instance=ExtResource( 14 )]

@@ -17,9 +17,12 @@ var score = 0
 var camera_fx = true
 var bonus_points = 0
 var best_combo = 1
+# is here to prevent multiple powerups from spawning 
+# if only one of them should be there
 var powerup_screen_active = false
 var current_powerup = "res://Pegs/Yellow/Powerups/Scattershot/Scattershot.tscn"
 var stage_powerup = "res://Pegs/Yellow/PowerupCards/Scattershot.tscn"
+var powerup_active = false
 
 func add_balls(balls):
 	balls_left += balls
