@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Ball/sprite.png" type="Texture" id=1]
 [ext_resource path="res://Ball/Ball.gd" type="Script" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Effects/greenParticle.png" type="Texture" id=6]
 [ext_resource path="res://Ball/aimingArrow.png" type="Texture" id=7]
 [ext_resource path="res://Ball/Arrow.gd" type="Script" id=8]
+[ext_resource path="res://Ball/CameraTransform.gd" type="Script" id=9]
 
 [sub_resource type="ParticlesMaterial" id=1]
 lifetime_randomness = 0.5
@@ -74,7 +75,10 @@ linear_velocity = Vector2( 0, -10 )
 script = ExtResource( 2 )
 
 [node name="CameraTransform" type="RemoteTransform2D" parent="."]
+pause_mode = 2
+position = Vector2( 0, 108 )
 remote_path = NodePath("../../../Camera2D")
+script = ExtResource( 9 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0, -10 )

@@ -129,6 +129,7 @@ margin_bottom = 165.0
 
 [node name="MainMenuCam" type="Camera2D" parent="."]
 pause_mode = 2
+position = Vector2( 192, 108 )
 current = true
 zoom = Vector2( 0.975, 0.975 )
 limit_left = 0

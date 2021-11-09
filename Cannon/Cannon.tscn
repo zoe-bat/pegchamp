@@ -7,13 +7,13 @@ position = Vector2( 192, 4 )
 texture = ExtResource( 1 )
 
 [node name="Left" type="Sprite" parent="."]
-position = Vector2( -101.375, 0 )
-scale = Vector2( 34.25, 1 )
+position = Vector2( -169, 0 )
+scale = Vector2( 58.05, 1 )
 texture = ExtResource( 1 )
 hframes = 6
 
 [node name="Right" type="Sprite" parent="."]
-position = Vector2( 102.375, 0 )
-scale = Vector2( 34.25, 1 )
+position = Vector2( 134.688, 0 )
+scale = Vector2( 45.325, 1 )
 texture = ExtResource( 1 )
 hframes = 6

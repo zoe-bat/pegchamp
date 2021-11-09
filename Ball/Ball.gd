@@ -53,7 +53,7 @@ func bounce_of(collider):
 		apply_central_impulse(Vector2(0, -64))
 
 func aim():
-	cameraTransform.position = Vector2.ZERO + get_local_mouse_position().normalized() * 10
+	cameraTransform.global_position = self.global_position + get_local_mouse_position().normalized() * 10
 	spawn_trajectory_dots()
 	if(Input.is_action_just_released("shoot")):
 		cameraTransform.position = Vector2.ZERO + linear_velocity.normalized() * 10

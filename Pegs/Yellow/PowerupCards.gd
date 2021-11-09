@@ -3,7 +3,7 @@ extends Node2D
 var scenes = []
 
 func _ready():
-	GameStats.connect("powerup_picked", self, "queue_free")
+	var _connect = GameStats.connect("powerup_picked", self, "queue_free")
 	scenes.append("res://Pegs/Yellow/PowerupCards/Scattershot.tscn")
 	scenes.append("res://Pegs/Yellow/PowerupCards/Spring.tscn")
 	

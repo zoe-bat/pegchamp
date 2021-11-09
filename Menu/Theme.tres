@@ -214,6 +214,7 @@ border_color = Color( 0.454902, 0.337255, 0.607843, 1 )
 default_font = ExtResource( 1 )
 Button/colors/font_color = Color( 0.454902, 0.337255, 0.607843, 1 )
 Button/colors/font_color_disabled = Color( 0.454902, 0.337255, 0.607843, 1 )
+Button/colors/font_color_focus = Color( 0.454902, 0.337255, 0.607843, 1 )
 Button/colors/font_color_hover = Color( 0.454902, 0.337255, 0.607843, 1 )
 Button/colors/font_color_pressed = Color( 0.454902, 0.337255, 0.607843, 1 )
 Button/constants/hseparation = 2

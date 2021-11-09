@@ -1,5 +1,6 @@
 extends Camera2D
-
+func _ready() -> void:
+	global_position = Vector2(384 / 2, -102)
 
 func _process(_delta):
 	if GameStats.camera_fx:
