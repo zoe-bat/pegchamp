@@ -1,0 +1,140 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Stages/EmptyStage.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Pegs/Purple/PurpleBar.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Pegs/Pink/PinkPeg.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Pegs/Purple/PurplePeg.gd" type="Script" id=4]
+[ext_resource path="res://Pegs/Purple/PurplePeg.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Pegs/Yellow/YellowPeg.tscn" type="PackedScene" id=6]
+
+[node name="World" instance=ExtResource( 1 )]
+stage_name = "bubbles"
+
+[node name="PurpleBar" parent="Pegs" index="0" instance=ExtResource( 2 )]
+position = Vector2( 192, 128 )
+
+[node name="PinkPeg" parent="Pegs" index="1" instance=ExtResource( 3 )]
+position = Vector2( 192, 152 )
+
+[node name="PurpleBar2" parent="Pegs" index="2" instance=ExtResource( 2 )]
+position = Vector2( 192, 174 )
+
+[node name="PurpleBar13" parent="Pegs" index="3" instance=ExtResource( 2 )]
+position = Vector2( 240, 174 )
+
+[node name="PurpleBar14" parent="Pegs" index="4" instance=ExtResource( 2 )]
+position = Vector2( 276, 174 )
+
+[node name="PurpleBar19" parent="Pegs" index="5" instance=ExtResource( 2 )]
+position = Vector2( 312, 174 )
+
+[node name="PurpleBar20" parent="Pegs" index="6" instance=ExtResource( 2 )]
+position = Vector2( 352, 174 )
+
+[node name="PurpleBar15" parent="Pegs" index="7" instance=ExtResource( 2 )]
+position = Vector2( 144, 174 )
+
+[node name="PurpleBar16" parent="Pegs" index="8" instance=ExtResource( 2 )]
+position = Vector2( 108, 174 )
+
+[node name="PurpleBar17" parent="Pegs" index="9" instance=ExtResource( 2 )]
+position = Vector2( 72, 174 )
+
+[node name="PurpleBar18" parent="Pegs" index="10" instance=ExtResource( 2 )]
+position = Vector2( 32, 174 )
+
+[node name="PurpleBar3" parent="Pegs" index="11" instance=ExtResource( 2 )]
+position = Vector2( 168, 152 )
+rotation = 1.57079
+
+[node name="PurpleBar4" parent="Pegs" index="12" instance=ExtResource( 2 )]
+position = Vector2( 213, 152 )
+rotation = 1.57079
+
+[node name="PurpleBar5" parent="Pegs" index="13" instance=ExtResource( 2 )]
+position = Vector2( 144, 80 )
+
+[node name="PinkPeg2" parent="Pegs" index="14" instance=ExtResource( 3 )]
+position = Vector2( 144, 104 )
+
+[node name="PurpleBar6" parent="Pegs" index="15" instance=ExtResource( 2 )]
+position = Vector2( 144, 126 )
+
+[node name="PurpleBar7" parent="Pegs" index="16" instance=ExtResource( 2 )]
+position = Vector2( 120, 104 )
+rotation = 1.57079
+
+[node name="PurpleBar8" parent="Pegs" index="17" instance=ExtResource( 2 )]
+position = Vector2( 165, 104 )
+rotation = 1.57079
+
+[node name="PurpleBar9" parent="Pegs" index="18" instance=ExtResource( 2 )]
+position = Vector2( 240, 80 )
+
+[node name="PinkPeg3" parent="Pegs" index="19" instance=ExtResource( 3 )]
+position = Vector2( 240, 104 )
+
+[node name="PinkPeg4" parent="Pegs" index="20" instance=ExtResource( 3 )]
+position = Vector2( 192, 84 )
+
+[node name="PinkPeg5" parent="Pegs" index="21" instance=ExtResource( 3 )]
+position = Vector2( 168, 128 )
+
+[node name="PinkPeg6" parent="Pegs" index="22" instance=ExtResource( 3 )]
+position = Vector2( 216, 128 )
+
+[node name="PurpleBar10" parent="Pegs" index="23" instance=ExtResource( 2 )]
+position = Vector2( 240, 126 )
+
+[node name="PurpleBar11" parent="Pegs" index="24" instance=ExtResource( 2 )]
+position = Vector2( 216, 104 )
+rotation = 1.57079
+script = ExtResource( 4 )
+
+[node name="PurpleBar12" parent="Pegs" index="25" instance=ExtResource( 2 )]
+position = Vector2( 261, 104 )
+rotation = 1.57079
+
+[node name="PurplePeg" parent="Pegs" index="26" instance=ExtResource( 5 )]
+position = Vector2( 136, 148 )
+
+[node name="PurplePeg2" parent="Pegs" index="27" instance=ExtResource( 5 )]
+position = Vector2( 128, 156 )
+
+[node name="PurplePeg3" parent="Pegs" index="28" instance=ExtResource( 5 )]
+position = Vector2( 136, 164 )
+
+[node name="PurplePeg4" parent="Pegs" index="29" instance=ExtResource( 5 )]
+position = Vector2( 144, 156 )
+
+[node name="PurplePeg5" parent="Pegs" index="30" instance=ExtResource( 5 )]
+position = Vector2( 96, 128 )
+
+[node name="PurplePeg6" parent="Pegs" index="31" instance=ExtResource( 5 )]
+position = Vector2( 88, 136 )
+
+[node name="PurplePeg7" parent="Pegs" index="32" instance=ExtResource( 5 )]
+position = Vector2( 96, 144 )
+
+[node name="PurplePeg8" parent="Pegs" index="33" instance=ExtResource( 5 )]
+position = Vector2( 104, 136 )
+
+[node name="PurplePeg9" parent="Pegs" index="34" instance=ExtResource( 5 )]
+position = Vector2( 256, 48 )
+
+[node name="PurplePeg10" parent="Pegs" index="35" instance=ExtResource( 5 )]
+position = Vector2( 264, 40 )
+
+[node name="PurplePeg11" parent="Pegs" index="36" instance=ExtResource( 5 )]
+position = Vector2( 272, 48 )
+
+[node name="PurplePeg12" parent="Pegs" index="37" instance=ExtResource( 5 )]
+position = Vector2( 264, 56 )
+
+[node name="PurplePeg13" parent="Pegs" index="38" instance=ExtResource( 5 )]
+position = Vector2( 264, 56 )
+
+[node name="YellowPeg" parent="Pegs" index="39" instance=ExtResource( 6 )]
+position = Vector2( 192, 104 )
+
+[editable path="Ball"]

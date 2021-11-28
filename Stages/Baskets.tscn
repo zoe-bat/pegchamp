@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Stages/EmptyStage.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Pegs/Pink/PinkPeg.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Pegs/Yellow/YellowPeg.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Pegs/Formations/U.tscn" type="PackedScene" id=4]
+
+[node name="World" instance=ExtResource( 1 )]
+stage_name = "baskets"
+powerup_card = "res://Pegs/Yellow/PowerupCards/Spring.tscn"
+
+[node name="Pegs" parent="." index="12"]
+position = Vector2( -24, -24 )
+
+[node name="U" parent="Pegs" index="0" instance=ExtResource( 4 )]
+position = Vector2( 24, 24 )
+
+[node name="U2" parent="Pegs" index="1" instance=ExtResource( 4 )]
+position = Vector2( -40, 24 )
+
+[node name="U3" parent="Pegs" index="2" instance=ExtResource( 4 )]
+position = Vector2( -104, 24 )
+
+[node name="U4" parent="Pegs" index="3" instance=ExtResource( 4 )]
+position = Vector2( 88, 24 )
+
+[node name="PinkPeg" parent="Pegs" index="4" instance=ExtResource( 2 )]
+position = Vector2( 120, 176 )
+
+[node name="PinkPeg2" parent="Pegs" index="5" instance=ExtResource( 2 )]
+position = Vector2( 184, 176 )
+
+[node name="PinkPeg3" parent="Pegs" index="6" instance=ExtResource( 2 )]
+position = Vector2( 248, 176 )
+
+[node name="PinkPeg4" parent="Pegs" index="7" instance=ExtResource( 2 )]
+position = Vector2( 312, 176 )
+
+[node name="YellowPeg" parent="Pegs" index="8" instance=ExtResource( 3 )]
+position = Vector2( 120, 164 )
+
+[node name="YellowPeg2" parent="Pegs" index="9" instance=ExtResource( 3 )]
+position = Vector2( 184, 164 )
+
+[node name="YellowPeg4" parent="Pegs" index="10" instance=ExtResource( 3 )]
+position = Vector2( 312, 160 )
+
+[node name="YellowPeg3" parent="Pegs" index="11" instance=ExtResource( 3 )]
+position = Vector2( 248, 160 )
+
+[editable path="Ball"]

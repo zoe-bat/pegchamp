@@ -21,42 +21,46 @@ margin_top = 2.0
 margin_right = 170.0
 margin_bottom = 438.0
 
-[node name="Heart" parent="LevelListHBox" instance=ExtResource( 5 )]
+[node name="Triangles" parent="LevelListHBox" instance=ExtResource( 5 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 168.0
 margin_bottom = 40.0
-text = "> heart"
+text = "> triangles"
 icon = ExtResource( 2 )
-scene = "res://Stages/Heart.tscn"
+scene = "res://Stages/Triangles.tscn"
+powerup_card = "res://Pegs/Yellow/PowerupCards/Spring.tscn"
 
-[node name="SceneSelectButton2" parent="LevelListHBox" instance=ExtResource( 5 )]
+[node name="Baskets" parent="LevelListHBox" instance=ExtResource( 5 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 44.0
 margin_right = 168.0
 margin_bottom = 84.0
+text = "> baskets"
 icon = ExtResource( 2 )
-scene = "res://Stages/EmptyStage.tscn"
-unlock_points_required = 1000
+scene = "res://Stages/Baskets.tscn"
+powerup_card = "res://Pegs/Yellow/PowerupCards/Spring.tscn"
 
-[node name="SceneSelectButton3" parent="LevelListHBox" instance=ExtResource( 5 )]
+[node name="Bubbles" parent="LevelListHBox" instance=ExtResource( 5 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 88.0
 margin_right = 168.0
 margin_bottom = 128.0
+text = "> bubbles"
 icon = ExtResource( 2 )
-scene = "res://Stages/EmptyStage.tscn"
+scene = "res://Stages/Bubbles.tscn"
 
-[node name="SceneSelectButton4" parent="LevelListHBox" instance=ExtResource( 5 )]
+[node name="Heart" parent="LevelListHBox" instance=ExtResource( 5 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 132.0
 margin_right = 168.0
 margin_bottom = 172.0
+text = "> heart"
 icon = ExtResource( 2 )
-scene = "res://Stages/EmptyStage.tscn"
+scene = "res://Stages/Heart.tscn"
 
 [node name="SceneSelectButton5" parent="LevelListHBox" instance=ExtResource( 5 )]
 anchor_right = 0.0

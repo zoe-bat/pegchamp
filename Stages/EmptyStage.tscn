@@ -217,8 +217,6 @@ shape = SubResource( 12 )
 [node name="Killzone" parent="." instance=ExtResource( 5 )]
 position = Vector2( 0, 248 )
 
-[node name="Pegs" type="Node2D" parent="."]
-
 [node name="Bucket" parent="." instance=ExtResource( 6 )]
 position = Vector2( 192, 206 )
 
@@ -228,5 +226,7 @@ position = Vector2( 192, 206 )
 
 [node name="PowerupCards" parent="." instance=ExtResource( 15 )]
 position = Vector2( 0, 4 )
+
+[node name="Pegs" type="Node2D" parent="."]
 
 [editable path="Ball"]

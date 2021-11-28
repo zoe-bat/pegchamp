@@ -19,6 +19,7 @@ collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RegularCollision"]
+visible = false
 shape = SubResource( 1 )
 
 [node name="SlowmoTimer" type="Timer" parent="."]
@@ -35,6 +36,7 @@ collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LastPegCollision"]
+visible = false
 shape = SubResource( 2 )
 
 [node name="ScoreCounter" parent="." instance=ExtResource( 4 )]
