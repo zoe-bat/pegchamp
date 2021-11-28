@@ -1,7 +1,6 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Menu/LevelInfo.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Menu/Buttons/RestartButton.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Menu/Theme.tres" type="Theme" id=3]
 [ext_resource path="res://Menu/WinScreen.gd" type="Script" id=4]
 [ext_resource path="res://Menu/Buttons/LevelSelectIconButton.tscn" type="PackedScene" id=5]
@@ -114,12 +113,8 @@ margin_top = 44.0
 margin_right = 117.0
 margin_bottom = 76.0
 
-[node name="RestartButton" parent="Control/Panel2/Panel/CenterContainer/GridContainer/HBoxContainer" instance=ExtResource( 2 )]
-margin_bottom = 32.0
-
 [node name="LevelSelectIconButton" parent="Control/Panel2/Panel/CenterContainer/GridContainer/HBoxContainer" instance=ExtResource( 5 )]
-margin_left = 36.0
-margin_right = 68.0
+margin_right = 32.0
 margin_bottom = 32.0
 texture_normal = ExtResource( 6 )
 texture_pressed = ExtResource( 8 )

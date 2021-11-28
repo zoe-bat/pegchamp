@@ -7,7 +7,7 @@ export var powerup_card = "res://Pegs/Yellow/PowerupCards/ExtraBall.tscn"
 
 func _ready():
 	load_level()
-	var _killzone_connec = $Killzone.connect("level_just_won", self, "save_level")
+	var _killzone_connec = GameStats.connect("win_animation_finished", self, "save_level")
 	GameStats.multiplier = 1
 
 func _physics_process(_delta):

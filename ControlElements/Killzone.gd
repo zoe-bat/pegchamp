@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-signal level_just_won
+signal level_just_won()
 enum {IDLE, MOVEUP, MOVEDOWN}
 var state = IDLE
 
@@ -32,5 +32,7 @@ func _on_ZoneDetection_area_entered(_area):
 	if (state == MOVEUP):
 		state = MOVEDOWN
 		if GameStats.level_won:
+			call_deferred("emit_signal", "level_just_won")
 			emit_signal("level_just_won")
+			print("finished")
 	else: state = IDLE

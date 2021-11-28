@@ -15,7 +15,7 @@ func _ready():
 	cameraTransform.position = Vector2.ZERO
 	animation.play("reset")
 	GameStats.balls_left = GameStats.max_balls
-	GameStats.connect("game_won", self, "queue_free")
+	var _connect = GameStats.connect("game_won", self, "queue_free")
 
 func _physics_process(_delta):
 	match state:

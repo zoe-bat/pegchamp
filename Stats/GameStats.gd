@@ -8,6 +8,7 @@ signal powerup_picked()
 signal recount_pink()
 signal pink_changed(value)
 signal game_won()
+signal win_animation_finished()
 
 var unlock_points = 10
 var max_balls = 3
@@ -78,6 +79,7 @@ func reset_board():
 func set_current_scene(stage):
 	current_stage = stage
 	emit_signal("current_stage_changed", current_stage)
+	print(stage)
 	
 func add_to_multiplier(value):
 	if value + GameStats.multiplier > GameStats.multiplier:

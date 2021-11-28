@@ -1,8 +1,8 @@
 extends PanelContainer
 
-onready var stage_label = $CenterContainer/HBoxContainer/VBoxContainer/StageName
-onready var score = $CenterContainer/HBoxContainer/VBoxContainer/ScoreLabel
-onready var play = $CenterContainer/HBoxContainer/VBoxContainer/PlayButton
+onready var stage_label = $VBoxContainer/StageName
+onready var score = $VBoxContainer/ScoreLabel
+onready var play = $VBoxContainer/PlayButton
 
 func _ready():
 	var _game_stats = GameStats.connect("current_stage_changed", self, "update_info")

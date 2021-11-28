@@ -6,7 +6,7 @@
 [ext_resource path="res://Pegs/Purple/PurplePeg.tscn" type="PackedScene" id=4]
 
 [node name="World" instance=ExtResource( 1 )]
-stage_name = "Heart"
+stage_name = "heart"
 powerup_card = "res://Pegs/Yellow/PowerupCards/Scattershot.tscn"
 
 [node name="PinkPeg" parent="Pegs" index="0" instance=ExtResource( 2 )]
