@@ -1,6 +1,7 @@
 extends StaticBody2D
 
 func _ready():
+	var _connection = GameStats.connect("recount_pink", self, "count")
 	GameStats.pinks_left += 1
 
 # turns the pegs green
@@ -19,10 +20,10 @@ func make_green():
 	$ScoreCounter.trigger()
 	
 	#finally delete the old peg
-	GameStats.pinks_left -= 1
 	win_level()
 	Engine.time_scale = 1
 	queue_free()
+	GameStats.recount_pink()
 	
 func win_level():
 	if GameStats.pinks_left <= 0:
@@ -47,3 +48,7 @@ func _on_LastPegCollision_body_entered(_body):
 
 func _on_Timer_timeout():
 	Engine.time_scale = 1
+
+# adds count of 1 for every pink peg
+func count():
+	GameStats.pinks_left += 1

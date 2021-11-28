@@ -21,13 +21,14 @@ margin_top = 2.0
 margin_right = 170.0
 margin_bottom = 438.0
 
-[node name="SceneSelectButton" parent="LevelListHBox" instance=ExtResource( 5 )]
+[node name="Heart" parent="LevelListHBox" instance=ExtResource( 5 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 168.0
 margin_bottom = 40.0
+text = "> Heart"
 icon = ExtResource( 2 )
-scene = "res://Stages/EmptyStage.tscn"
+scene = "res://Stages/Heart.tscn"
 
 [node name="SceneSelectButton2" parent="LevelListHBox" instance=ExtResource( 5 )]
 anchor_right = 0.0

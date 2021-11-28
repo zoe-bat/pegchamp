@@ -15,6 +15,7 @@ func _ready():
 	cameraTransform.position = Vector2.ZERO
 	animation.play("reset")
 	GameStats.balls_left = GameStats.max_balls
+	GameStats.connect("game_won", self, "queue_free")
 
 func _physics_process(_delta):
 	match state:
@@ -32,7 +33,7 @@ func handle_collisions():
 		for collider in collider_array:
 			set_particle_direction(collider)
 			bounce_of(collider)
-			turn_pegs_green(collider)
+			call_deferred("turn_pegs_green", collider)
 
 func turn_pegs_green(collider):
 	# check if pegs can be turned green

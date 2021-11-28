@@ -5,6 +5,9 @@ signal current_stage_changed(scene)
 signal multiplier_changed(value)
 signal score_changed(value)
 signal powerup_picked()
+signal recount_pink()
+signal pink_changed(value)
+signal game_won()
 
 var unlock_points = 10
 var max_balls = 3
@@ -48,7 +51,7 @@ func decide_game():
 		var Winscreen = preload("res://Menu/WinScreen.tscn")
 		var winscreen = Winscreen.instance()
 		main.add_child(winscreen)
-		
+		emit_signal("game_won")
 
 	# game is lost
 	elif (balls_left <= 0):
@@ -98,3 +101,9 @@ func set_score_to(value):
 func pick_powerup():
 	powerup_screen_active = false
 	emit_signal("powerup_picked")
+
+func recount_pink():
+	pinks_left = 0;
+	emit_signal("recount_pink")
+	pinks_left -= 1
+	emit_signal("pink_changed", pinks_left)
