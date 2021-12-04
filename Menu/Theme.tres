@@ -1,9 +1,7 @@
-[gd_resource type="Theme" load_steps=30 format=2]
+[gd_resource type="Theme" load_steps=28 format=2]
 
 [ext_resource path="res://Font/Yoster-island/Yoster16.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Font/Yoster-island/Yoster.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://Menu/Icons/check/check1.png" type="Texture" id=3]
-[ext_resource path="res://Menu/Icons/check/check2.png" type="Texture" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 2 )
@@ -232,10 +230,10 @@ CheckBox/colors/font_color_pressed = Color( 0, 0, 0, 1 )
 CheckBox/constants/check_vadjust = 0
 CheckBox/constants/hseparation = 4
 CheckBox/fonts/font = null
-CheckBox/icons/checked = ExtResource( 4 )
+CheckBox/icons/checked = null
 CheckBox/icons/radio_checked = null
 CheckBox/icons/radio_unchecked = null
-CheckBox/icons/unchecked = ExtResource( 3 )
+CheckBox/icons/unchecked = null
 CheckBox/styles/disabled = null
 CheckBox/styles/focus = null
 CheckBox/styles/hover = null
